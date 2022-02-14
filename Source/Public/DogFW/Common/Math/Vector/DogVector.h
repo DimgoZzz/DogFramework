@@ -3,7 +3,7 @@
 #include "DogFW/Common/Math/Vector/SIMDVectorA.h"
 
 
-namespace DogFW :: inline BasicTypes
+namespace DogFW :: inline basictypes
 {
 	using Vector4 = SIMDVector4DAligned;
 }
