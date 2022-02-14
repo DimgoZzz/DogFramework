@@ -1,6 +1,6 @@
 #pragma once
 #include "DogFW/DogBasicTypes.h"
-#include "DogFW/External/Windows/DogDX12.h"
+#include "DogFW/External/DirectX/DogDirectX.h"
 
 namespace DogFW
 {

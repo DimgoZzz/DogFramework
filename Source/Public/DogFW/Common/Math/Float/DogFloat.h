@@ -1,6 +1,6 @@
 #pragma once
 
-namespace DogFW
+namespace DogFW :: inline BasicTypes
 {
 	using Float = float;
 	using Double = double;
