@@ -1,95 +1,132 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
-    <Filter Include="Source">
-      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
-      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    <Filter Include="DogFW">
+      <UniqueIdentifier>{fdc0b301-c517-47ca-92c0-2dac4906e58d}</UniqueIdentifier>
     </Filter>
-    <Filter Include="Resource Files">
-      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
-      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    <Filter Include="DogFW\Common">
+      <UniqueIdentifier>{df1e5f1a-6aa1-47f8-8010-91a5f1e0c9c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DogFW\Engine">
+      <UniqueIdentifier>{2d0539ec-3ce5-473e-9add-d8166e1b6095}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DogFW\External">
+      <UniqueIdentifier>{0ef83ccb-15db-40b2-b2fe-55426a5bc09e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DogFW\External\Windows">
+      <UniqueIdentifier>{bf9a622c-12cb-4a80-b965-78008ff27f08}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DogFW\Engine\Core">
+      <UniqueIdentifier>{d18b56bd-ef68-45fb-98b3-cc8384b2c182}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DogFW\Common\BasicTypes">
+      <UniqueIdentifier>{31120ceb-d9c6-4680-a6dd-463d1bac8d30}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DogFW\Common\Log">
+      <UniqueIdentifier>{54052cd5-1727-428f-8002-05405847ba2e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="DogFW\Common\Time">
+      <UniqueIdentifier>{8b0ecf29-04a8-42a7-af40-11c1934bf909}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="Source\Private\DogFW\External\Windows\DogWindows.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Private\DogFW\Common\Text\DogString.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Private\DogFW\Common\Math\DogInt.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Private\DogFW\Common\Time\StopWatch.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Private\DogFW\Common\Math\DogVector.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Private\DogFW\Common\Math\SIMDVectorA.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Private\DogFW\Common\Time\Timer.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Private\DogFW\Engine\Core\Application.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Private\DogFW\Engine\Core\IApplication.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Private\DogFW\Common\Log\LoggerSimple.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Private\DogFW\Common\Text\DogChar.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Private\DogFW\Common\Math\DogFloat.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Private\DogFW\Common\Math\SIMDVector.cpp">
-      <Filter>Source</Filter>
-    </ClCompile>
-    <ClCompile Include="Source\Private\DogFW\Common\Math\DogBool.cpp">
-      <Filter>Source</Filter>
+      <Filter>DogFW\External\Windows</Filter>
     </ClCompile>
     <ClCompile Include="Source\Private\DogFW\Engine\Core\AppSettings.cpp">
-      <Filter>Source</Filter>
+      <Filter>DogFW\Engine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Private\DogFW\Engine\Core\Application.cpp">
+      <Filter>DogFW\Engine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Private\DogFW\Engine\Core\IApplication.cpp">
+      <Filter>DogFW\Engine\Core</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Private\DogFW\Common\Math\DogBool.cpp">
+      <Filter>DogFW\Common\BasicTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Private\DogFW\Common\Text\DogChar.cpp">
+      <Filter>DogFW\Common\BasicTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Private\DogFW\Common\Math\DogFloat.cpp">
+      <Filter>DogFW\Common\BasicTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Private\DogFW\Common\Math\DogInt.cpp">
+      <Filter>DogFW\Common\BasicTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Private\DogFW\Common\Text\DogString.cpp">
+      <Filter>DogFW\Common\BasicTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Private\DogFW\Common\Math\DogVector.cpp">
+      <Filter>DogFW\Common\BasicTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Private\DogFW\Common\Log\LoggerSimple.cpp">
+      <Filter>DogFW\Common\Log</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Private\DogFW\Common\Time\StopWatch.cpp">
+      <Filter>DogFW\Common\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Private\DogFW\Common\Time\Timer.cpp">
+      <Filter>DogFW\Common\Time</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Private\DogFW\Common\Math\SIMDVectorA.cpp">
+      <Filter>DogFW\Common\BasicTypes</Filter>
+    </ClCompile>
+    <ClCompile Include="Source\Private\DogFW\Common\Math\SIMDVector.cpp">
+      <Filter>DogFW\Common\BasicTypes</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Source\Public\DogFW\External\Windows\DogWindows.h">
+      <Filter>DogFW\External\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Public\DogFW\External\Windows\DogDX12.h">
+      <Filter>DogFW\External\Windows</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Public\DogFW\Engine\Core\AppSettings.h">
+      <Filter>DogFW\Engine\Core</Filter>
+    </ClInclude>
     <ClInclude Include="Source\Public\DogFW\Engine\Core\Application.h">
-      <Filter>Source</Filter>
+      <Filter>DogFW\Engine\Core</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Public\DogFW\Common\Math\DogInt.h">
-      <Filter>Source</Filter>
-    </ClInclude>
-    <ClInclude Include="Source\Public\DogFW\Common\Text\DogString.h">
-      <Filter>Source</Filter>
+    <ClInclude Include="Source\Public\DogFW\Engine\Core\IApplication.h">
+      <Filter>DogFW\Engine\Core</Filter>
     </ClInclude>
     <ClInclude Include="Source\Public\DogFW\Common\Math\DogVector.h">
-      <Filter>Source</Filter>
+      <Filter>DogFW\Common\BasicTypes</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Public\DogFW\External\Windows\DogWindows.h">
-      <Filter>Source</Filter>
+    <ClInclude Include="Source\Public\DogFW\Common\Math\DogBool.h">
+      <Filter>DogFW\Common\BasicTypes</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Public\DogFW\Common\Math\SIMDVectorA.h">
-      <Filter>Source</Filter>
+    <ClInclude Include="Source\Public\DogFW\Common\Text\DogChar.h">
+      <Filter>DogFW\Common\BasicTypes</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Public\DogFW\Common\Time\StopWatch.h">
-      <Filter>Source</Filter>
+    <ClInclude Include="Source\Public\DogFW\Common\Math\DogFloat.h">
+      <Filter>DogFW\Common\BasicTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Public\DogFW\Common\Math\DogInt.h">
+      <Filter>DogFW\Common\BasicTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Public\DogFW\Common\Text\DogString.h">
+      <Filter>DogFW\Common\BasicTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Public\DogFW\DogBasicTypes.h">
+      <Filter>DogFW\Common</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Public\DogFW\Common\Log\LoggerSimple.h">
+      <Filter>DogFW\Common\Log</Filter>
     </ClInclude>
     <ClInclude Include="Source\Public\DogFW\Common\Time\Timer.h">
-      <Filter>Source</Filter>
+      <Filter>DogFW\Common\Time</Filter>
     </ClInclude>
-    <ClInclude Include="Source\Public\DogFW\Engine\Core\IApplication.h" />
-    <ClInclude Include="Source\Public\DogFW\Common\Log\LoggerSimple.h" />
-    <ClInclude Include="Source\Public\DogFW\Common\Text\DogChar.h" />
-    <ClInclude Include="Source\Public\DogFW\DogBasicTypes.h" />
-    <ClInclude Include="Source\Public\DogFW\Common\Math\DogFloat.h" />
-    <ClInclude Include="Source\Public\DogFW\Common\Math\SIMDVector.h" />
-    <ClInclude Include="Source\Public\DogFW\External\Windows\DogDX12.h" />
-    <ClInclude Include="Source\Public\DogFW\Common\Math\DogBool.h" />
-    <ClInclude Include="Source\Public\DogFW\Engine\Core\AppSettings.h" />
+    <ClInclude Include="Source\Public\DogFW\Common\Time\StopWatch.h">
+      <Filter>DogFW\Common\Time</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Public\DogFW\Common\Math\SIMDVectorA.h">
+      <Filter>DogFW\Common\BasicTypes</Filter>
+    </ClInclude>
+    <ClInclude Include="Source\Public\DogFW\Common\Math\SIMDVector.h">
+      <Filter>DogFW\Common\BasicTypes</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
