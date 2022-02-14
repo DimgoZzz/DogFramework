@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Source\Private\DogFW\Engine\Core\AppSettings.cpp" />
+    <ClCompile Include="Source\Private\DogFW\Common\Math\DogBool.cpp" />
+    <ClCompile Include="Source\Private\DogFW\Common\Math\SIMDVector.cpp" />
+    <ClCompile Include="Source\Private\DogFW\Common\Math\DogFloat.cpp" />
+    <ClCompile Include="Source\Private\DogFW\Common\Text\DogChar.cpp" />
+    <ClCompile Include="Source\Private\DogFW\Common\Log\LoggerSimple.cpp" />
+    <ClCompile Include="Source\Private\DogFW\Engine\Core\IApplication.cpp" />
+    <ClCompile Include="Source\Private\DogFW\Engine\Core\Application.cpp" />
+    <ClCompile Include="Source\Private\DogFW\Common\Math\SIMDVectorA.cpp" />
+    <ClCompile Include="Source\Private\DogFW\Common\Math\DogVector.cpp" />
+    <ClCompile Include="Source\Private\DogFW\Common\Math\DogInt.cpp" />
+    <ClCompile Include="Source\Private\DogFW\Common\Text\DogString.cpp" />
+    <ClCompile Include="Source\Private\DogFW\External\Windows\DogWindows.cpp" />
+    <ClCompile Include="Source\Private\DogFW\Common\Time\StopWatch.cpp" />
+    <ClCompile Include="Source\Private\DogFW\Common\Time\Timer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Source\Public\DogFW\Engine\Core\AppSettings.h" />
+    <ClInclude Include="Source\Public\DogFW\Common\Math\DogBool.h" />
+    <ClInclude Include="Source\Public\DogFW\Common\Math\DogFloat.h" />
+    <ClInclude Include="Source\Public\DogFW\DogBasicTypes.h" />
+    <ClInclude Include="Source\Public\DogFW\Common\Text\DogChar.h" />
+    <ClInclude Include="Source\Public\DogFW\Common\Log\LoggerSimple.h" />
+    <ClInclude Include="Source\Public\DogFW\Engine\Core\IApplication.h" />
+    <ClInclude Include="Source\Public\DogFW\Engine\Core\Application.h" />
+    <ClInclude Include="Source\Public\DogFW\Common\Math\DogVector.h" />
+    <ClInclude Include="Source\Public\DogFW\Common\Math\DogInt.h" />
+    <ClInclude Include="Source\Public\DogFW\Common\Text\DogString.h" />
+    <ClInclude Include="Source\Public\DogFW\External\Windows\DogDX12.h" />
+    <ClInclude Include="Source\Public\DogFW\External\Windows\DogWindows.h" />
+    <ClInclude Include="Source\Public\DogFW\Common\Time\StopWatch.h" />
+    <ClInclude Include="Source\Public\DogFW\Common\Math\SIMDVectorA.h" />
+    <ClInclude Include="Source\Public\DogFW\Common\Time\Timer.h" />
+    <ClInclude Include="Source\Public\DogFW\Common\Math\SIMDVector.h" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>16.0</VCProjectVersion>
+    <Keyword>Win32Proj</Keyword>
+    <ProjectGuid>{1c2d8021-d68b-48e0-a67c-5de5446cc379}</ProjectGuid>
+    <RootNamespace>DogFramework</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)Build\$(Platform)-$(Configuration)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)Build\Intermediate\$(Platform)-$(Configuration)\$(ProjectName)\</IntDir>
+    <AllProjectBMIsArePublic>true</AllProjectBMIsArePublic>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)Build\$(Platform)-$(Configuration)\$(ProjectName)\</OutDir>
+    <IntDir>$(SolutionDir)Build\Intermediate\$(Platform)-$(Configuration)\$(ProjectName)\</IntDir>
+    <AllProjectBMIsArePublic>true</AllProjectBMIsArePublic>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <LanguageStandard>stdcpp20</LanguageStandard>
+      <LanguageStandard_C>stdc17</LanguageStandard_C>
+      <AdditionalIncludeDirectories>$(ProjectDir)Include\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <FloatingPointModel>Fast</FloatingPointModel>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
