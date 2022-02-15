@@ -1,7 +1,7 @@
 #include "DogFW/Common/Log/LoggerSimple.h"
+#include "DogFW/External/Windows/DogWindows.h"
 #include <stdarg.h>
 #include <fstream>
-#include "DogFW/External/Windows/DogWindows.h"
 
 namespace DogFW
 {
@@ -66,7 +66,7 @@ namespace DogFW
 		outfile.open((filePath_+fileName_).c_str(), std::ios_base::app);
 		if (!outfile.is_open())
 		{
-			D_CRITERR(L"Cant open log file");
+			//D_CRITERR(L"Cant open log file");
 		}
 
 		for (int i=0;i<messages.size();++i)

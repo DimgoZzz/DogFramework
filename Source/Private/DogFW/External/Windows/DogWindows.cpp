@@ -1,64 +1,51 @@
 #include "DogFW/External/Windows/DogWindows.h"
 
 #include <comdef.h>
-//
-//namespace DogFW
-//{
-//    WString DogFW::getErrorInfo(DWORD errorMessageID)
-//    {
-//        _com_error error(errorMessageID);
-//        WString error_message = error.ErrorMessage();
-//        return error_message;
-//    }
-//
-//    void DogFW::debugTextWindow(String str)
-//    {
-//        MessageBoxA(NULL, str.c_str(), "DebugTextWindow", NULL);
-//    }
-//    void DogFW::debugTextWindow(WString str)
-//    {
-//        MessageBoxW(NULL, str.c_str(), L"DebugTextWindow", NULL);
-//    }
-//    void DogFW::debugTextWindow(HRESULT hr, String str)
-//    {
-//        _com_error error(hr);
-//        WString i = L"J";
-//        WString error_message =  + str.ToWString() + L"\n" + error.ErrorMessage();
-//
-//        MessageBoxW(NULL, error_message.c_str(), L"DebugTextWindow", NULL);
-//    }
-//    void DogFW::debugTextWindow(HRESULT hr, WString str)
-//    {
-//        _com_error error(hr);
-//        WString error_message = L"Error:" + str + L"\n" + error.ErrorMessage();
-//
-//        MessageBoxW(NULL, error_message.c_str(), L"DebugTextWindow", NULL);
-//    }
-//    
-//
-//    void DogFW::critErr(String str)
-//    {
-//        MessageBoxW(NULL, StringConverter::stringToWide(str).c_str(), L"Critical Error", MB_ICONERROR);
-//        exit(-1);
-//    }
-//    void DogFW::critErr(WString str)
-//    {
-//        MessageBoxW(NULL, str.c_str(), L"Critical Error", MB_ICONERROR);
-//        exit(-1);
-//    }
-//    void critErr(HRESULT hr, String str)
-//    {
-//        _com_error error(hr);
-//        WString error_message = L"Error:" + StringConverter::stringToWide(str) + L"\n" + error.ErrorMessage();
-//
-//        MessageBoxW(NULL, error_message.c_str(), L"Critical Error", MB_ICONERROR);
-//    }
-//    void critErr(HRESULT hr, WString str)
-//    {
-//        _com_error error(hr);
-//        WString error_message = L"Error:" + str + L"\n" + error.ErrorMessage();
-//
-//        MessageBoxW(NULL, error_message.c_str(), L"Critical Error", MB_ICONERROR);
-//    }
-//
-//}
+
+namespace DogFW::win
+{
+	WString GetErrorDesc(DWORD errorMessageID)
+	{
+		_com_error error(errorMessageID);
+		WString error_message = error.ErrorMessage();
+		return error_message;
+	}
+
+	void msgWindow(String str)
+	{
+		MessageBoxA(NULL, str.c_str(), "Message Window", MB_OK | MB_ICONINFORMATION);
+	}
+	void msgWindow(WString wstr)
+	{
+		MessageBoxW(NULL, wstr.c_str(), L"Message Window", MB_OK| MB_ICONINFORMATION);
+	}
+
+	void msgWindow(HRESULT hr, String str)
+	{
+		_com_error error(hr);
+		String error_message = "Error:" + str + "\n" + string::toString(error.ErrorMessage());
+		
+		MessageBoxA(NULL, error_message.c_str(), "DebugTextWindow", MB_OK | MB_ICONWARNING);
+	}
+	void msgWindow(HRESULT hr, WString wstr)
+	{
+		_com_error error(hr);
+		WString i = L"J";
+		WString error_message = L"Error:" + wstr + L"\n" + error.ErrorMessage();
+
+		MessageBoxW(NULL, error_message.c_str(), L"DebugTextWindow", MB_OK | MB_ICONWARNING);
+	}
+
+	void critError(String str)
+	{
+		MessageBoxA(NULL, str.c_str(), "Critical Error", MB_OK | MB_ICONERROR);
+		exit(-1);
+		//abort();
+	}
+	void critError(WString wstr)
+	{
+		MessageBoxW(NULL, wstr.c_str(), L"Critical Error", MB_OK | MB_ICONERROR);
+		exit(-1);
+		//abort();
+	}
+}
