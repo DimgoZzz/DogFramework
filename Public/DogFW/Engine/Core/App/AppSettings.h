@@ -1,7 +1,7 @@
 #pragma once
 #include "DogFW/DogBasicTypes.h"
 
-namespace DogFW
+namespace DogFW :: inline app
 {
 	class AppSettings
 	{

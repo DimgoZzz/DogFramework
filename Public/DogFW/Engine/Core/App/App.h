@@ -1,7 +1,7 @@
 #pragma once
-#include "IApplication.h"
+#include "DogFW/Engine/Core/App/IApp.h"
 
-namespace DogFW
+namespace DogFW :: inline app
 {
 	class Application : public IApplication
 	{

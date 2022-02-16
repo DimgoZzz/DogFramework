@@ -1,6 +1,6 @@
 #pragma once
 
-namespace DogFW
+namespace DogFW :: inline app
 {
 	class IApplication
 	{
