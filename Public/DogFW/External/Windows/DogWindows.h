@@ -4,6 +4,8 @@
 
 #include "DogFW/DogBasicTypes.h"
 
+#include "DogFW/Resources/DogResources.h"
+
 #pragma region Macros
 
 //Path of current file

@@ -93,6 +93,7 @@
     <ClCompile Include="Private\DogFW\Common\Text\String\DogString.cpp" />
     <ClCompile Include="Private\DogFW\Engine\Core\Window\IWindow.cpp" />
     <ClCompile Include="Private\DogFW\Common\Math\Vector\PrimitiveInt2DVector.cpp" />
+    <ClCompile Include="Private\DogFW\Resources\DogFWIcon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Public\DogFW\External\Windows\DogWindows.h">
@@ -147,5 +148,7 @@
     <ClInclude Include="Public\DogFW\Engine\Core\Window\IWindow.h" />
     <ClInclude Include="Public\DogFW\DogMath.h" />
     <ClInclude Include="Public\DogFW\Common\Math\Vector\PrimitiveInt2DVector.h" />
+    <ClInclude Include="Public\DogFW\Resources\Icons\DogFWIcon.h" />
+    <ClInclude Include="Public\DogFW\Resources\DogResources.h" />
   </ItemGroup>
 </Project>

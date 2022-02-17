@@ -28,6 +28,7 @@
     <ClCompile Include="Private\DogFW\External\Windows\DogWindows.cpp" />
     <ClCompile Include="Private\DogFW\Common\Time\StopWatch.cpp" />
     <ClCompile Include="Private\DogFW\Common\Time\Timer.cpp" />
+    <ClCompile Include="Private\DogFW\Resources\DogFWIcon.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Public\DogFW\Common\Math\Vector\PrimitiveInt2DVector.h" />
@@ -50,6 +51,8 @@
     <ClInclude Include="Public\DogFW\Common\Math\Vector\SIMDVectorA.h" />
     <ClInclude Include="Public\DogFW\Common\Time\Timer.h" />
     <ClInclude Include="Public\DogFW\Common\Math\Vector\SIMDVector.h" />
+    <ClInclude Include="Public\DogFW\Resources\DogResources.h" />
+    <ClInclude Include="Public\DogFW\Resources\Icons\DogFWIcon.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>
