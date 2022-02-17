@@ -2,7 +2,7 @@
 #include "DogFW/DogBasicTypes.h"
 #include "DogFW/External/DirectX/DogDirectX.h"
 
-namespace DogFW
+namespace DogFW :: math
 {
 	//4D vector based on XMVector aligned struct
 	class SIMDVector4DAligned

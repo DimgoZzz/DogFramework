@@ -1,12 +1,12 @@
 #pragma once
 
-namespace DogFW :: inline app
+namespace DogFW :: engine
 {
-	class IApplication
+	class IApp
 	{
 	protected:
-		IApplication();
-		virtual ~IApplication() = 0;
+		IApp();
+		virtual ~IApp() = 0;
 	public:
 		virtual void initialize() = 0;
 		virtual void update() = 0;

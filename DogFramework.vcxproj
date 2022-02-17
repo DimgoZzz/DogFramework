@@ -11,36 +11,39 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Private\DogFW\Common\Math\Vector\PrimitiveInt2DVector.cpp" />
     <ClCompile Include="Private\DogFW\Engine\Core\Window\IWindow.cpp" />
     <ClCompile Include="Private\DogFW\Common\Text\String\DogString.cpp" />
     <ClCompile Include="Private\DogFW\Engine\Core\App\AppSettings.cpp" />
-    <ClCompile Include="Private\DogFW\Common\BasicTypes\Bool\DogBool.cpp" />
+    <ClCompile Include="Private\DogFW\Common\Math\Bool\DogBool.cpp" />
     <ClCompile Include="Private\DogFW\Common\Math\Vector\SIMDVector.cpp" />
-    <ClCompile Include="Private\DogFW\Common\BasicTypes\Float\DogFloat.cpp" />
-    <ClCompile Include="Private\DogFW\Common\BasicTypes\Char\DogChar.cpp" />
+    <ClCompile Include="Private\DogFW\Common\Math\Float\DogFloat.cpp" />
+    <ClCompile Include="Private\DogFW\Common\Text\Char\DogChar.cpp" />
     <ClCompile Include="Private\DogFW\Common\Log\LoggerSimple.cpp" />
     <ClCompile Include="Private\DogFW\Engine\Core\App\IApp.cpp" />
-    <ClCompile Include="Private\DogFW\Engine\Core\App\Appl.cpp" />
+    <ClCompile Include="Private\DogFW\Engine\Core\App\App.cpp" />
     <ClCompile Include="Private\DogFW\Common\Math\Vector\SIMDVectorA.cpp" />
     <ClCompile Include="Private\DogFW\Common\Math\Vector\DogVector.cpp" />
-    <ClCompile Include="Private\DogFW\Common\BasicTypes\Integer\DogInt.cpp" />
+    <ClCompile Include="Private\DogFW\Common\Math\Integer\DogInt.cpp" />
     <ClCompile Include="Private\DogFW\External\Windows\DogWindows.cpp" />
     <ClCompile Include="Private\DogFW\Common\Time\StopWatch.cpp" />
     <ClCompile Include="Private\DogFW\Common\Time\Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Public\DogFW\Common\Math\Vector\PrimitiveInt2DVector.h" />
+    <ClInclude Include="Public\DogFW\DogMath.h" />
     <ClInclude Include="Public\DogFW\Engine\Core\Window\IWindow.h" />
     <ClInclude Include="Public\DogFW\Common\Text\String\DogString.h" />
     <ClInclude Include="Public\DogFW\Engine\Core\App\AppSettings.h" />
-    <ClInclude Include="Public\DogFW\Common\BasicTypes\Bool\DogBool.h" />
-    <ClInclude Include="Public\DogFW\Common\BasicTypes\Float\DogFloat.h" />
+    <ClInclude Include="Public\DogFW\Common\Math\Bool\DogBool.h" />
+    <ClInclude Include="Public\DogFW\Common\Math\Float\DogFloat.h" />
     <ClInclude Include="Public\DogFW\DogBasicTypes.h" />
-    <ClInclude Include="Public\DogFW\Common\BasicTypes\Char\DogChar.h" />
+    <ClInclude Include="Public\DogFW\Common\Text\Char\DogChar.h" />
     <ClInclude Include="Public\DogFW\Common\Log\LoggerSimple.h" />
     <ClInclude Include="Public\DogFW\Engine\Core\App\IApp.h" />
     <ClInclude Include="Public\DogFW\Engine\Core\App\App.h" />
     <ClInclude Include="Public\DogFW\Common\Math\Vector\DogVector.h" />
-    <ClInclude Include="Public\DogFW\Common\BasicTypes\Integer\DogInt.h" />
+    <ClInclude Include="Public\DogFW\Common\Math\Integer\DogInt.h" />
     <ClInclude Include="Public\DogFW\External\DirectX\DogDirectX.h" />
     <ClInclude Include="Public\DogFW\External\Windows\DogWindows.h" />
     <ClInclude Include="Public\DogFW\Common\Time\StopWatch.h" />

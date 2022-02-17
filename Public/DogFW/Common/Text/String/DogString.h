@@ -1,5 +1,5 @@
 #pragma once
-#include "DogFW/Common/BasicTypes/Char/DogChar.h"
+#include "DogFW/Common/Text/Char/DogChar.h"
 #include <string>
 
 namespace DogFW::inline basictypes

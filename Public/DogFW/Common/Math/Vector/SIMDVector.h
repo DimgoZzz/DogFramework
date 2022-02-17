@@ -2,7 +2,7 @@
 #include "DogFW/DogBasicTypes.h"
 #include "DogFW/External/DirectX/DogDirectX.h"
 
-namespace DogFW
+namespace DogFW :: math
 {
 	//4D vector based on storing data into xmFloat_
 	class SIMDFVector4D

@@ -54,7 +54,7 @@
     <ClCompile Include="Private\DogFW\Engine\Core\App\AppSettings.cpp">
       <Filter>DogFW\Engine\Core</Filter>
     </ClCompile>
-    <ClCompile Include="Private\DogFW\Engine\Core\App\Appl.cpp">
+    <ClCompile Include="Private\DogFW\Engine\Core\App\App.cpp">
       <Filter>DogFW\Engine\Core</Filter>
     </ClCompile>
     <ClCompile Include="Private\DogFW\Engine\Core\App\IApp.cpp">
@@ -69,7 +69,7 @@
     <ClCompile Include="Private\DogFW\Common\Time\Timer.cpp">
       <Filter>DogFW\Common\Time</Filter>
     </ClCompile>
-    <ClCompile Include="Private\DogFW\Common\BasicTypes\Char\DogChar.cpp">
+    <ClCompile Include="Private\DogFW\Common\Text\Char\DogChar.cpp">
       <Filter>DogFW\Common\Text</Filter>
     </ClCompile>
     <ClCompile Include="Private\DogFW\Common\Math\Vector\SIMDVector.cpp">
@@ -81,17 +81,18 @@
     <ClCompile Include="Private\DogFW\Common\Math\Vector\DogVector.cpp">
       <Filter>DogFW\Common\Math\Vector</Filter>
     </ClCompile>
-    <ClCompile Include="Private\DogFW\Common\BasicTypes\Bool\DogBool.cpp">
+    <ClCompile Include="Private\DogFW\Common\Math\Bool\DogBool.cpp">
       <Filter>DogFW\Common\Math\Bool</Filter>
     </ClCompile>
-    <ClCompile Include="Private\DogFW\Common\BasicTypes\Integer\DogInt.cpp">
+    <ClCompile Include="Private\DogFW\Common\Math\Integer\DogInt.cpp">
       <Filter>DogFW\Common\Math\Integer</Filter>
     </ClCompile>
-    <ClCompile Include="Private\DogFW\Common\BasicTypes\Float\DogFloat.cpp">
+    <ClCompile Include="Private\DogFW\Common\Math\Float\DogFloat.cpp">
       <Filter>DogFW\Common\Math\Float</Filter>
     </ClCompile>
     <ClCompile Include="Private\DogFW\Common\Text\String\DogString.cpp" />
     <ClCompile Include="Private\DogFW\Engine\Core\Window\IWindow.cpp" />
+    <ClCompile Include="Private\DogFW\Common\Math\Vector\PrimitiveInt2DVector.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Public\DogFW\External\Windows\DogWindows.h">
@@ -115,7 +116,7 @@
     <ClInclude Include="Public\DogFW\Common\Time\StopWatch.h">
       <Filter>DogFW\Common\Time</Filter>
     </ClInclude>
-    <ClInclude Include="Public\DogFW\Common\BasicTypes\Char\DogChar.h">
+    <ClInclude Include="Public\DogFW\Common\Text\Char\DogChar.h">
       <Filter>DogFW\Common\Text</Filter>
     </ClInclude>
     <ClInclude Include="Public\DogFW\Common\Math\Vector\SIMDVectorA.h">
@@ -127,13 +128,13 @@
     <ClInclude Include="Public\DogFW\Common\Math\Vector\DogVector.h">
       <Filter>DogFW\Common\Math\Vector</Filter>
     </ClInclude>
-    <ClInclude Include="Public\DogFW\Common\BasicTypes\Bool\DogBool.h">
+    <ClInclude Include="Public\DogFW\Common\Math\Bool\DogBool.h">
       <Filter>DogFW\Common\Math\Bool</Filter>
     </ClInclude>
-    <ClInclude Include="Public\DogFW\Common\BasicTypes\Integer\DogInt.h">
+    <ClInclude Include="Public\DogFW\Common\Math\Integer\DogInt.h">
       <Filter>DogFW\Common\Math\Integer</Filter>
     </ClInclude>
-    <ClInclude Include="Public\DogFW\Common\BasicTypes\Float\DogFloat.h">
+    <ClInclude Include="Public\DogFW\Common\Math\Float\DogFloat.h">
       <Filter>DogFW\Common\Math\Float</Filter>
     </ClInclude>
     <ClInclude Include="Public\DogFW\External\DirectX\DogDirectX.h">
@@ -144,5 +145,7 @@
     </ClInclude>
     <ClInclude Include="Public\DogFW\Common\Text\String\DogString.h" />
     <ClInclude Include="Public\DogFW\Engine\Core\Window\IWindow.h" />
+    <ClInclude Include="Public\DogFW\DogMath.h" />
+    <ClInclude Include="Public\DogFW\Common\Math\Vector\PrimitiveInt2DVector.h" />
   </ItemGroup>
 </Project>

@@ -21,6 +21,6 @@ namespace DogFW
 	private:
 		WString filePath_ = L"Log/";
 		WString fileName_ = L"SimpleLog.log";
-		std::vector<WString> messages;
+		std::vector<WString> messages_;
 	};
 }

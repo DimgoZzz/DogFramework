@@ -1,13 +1,13 @@
 #pragma once
 #include "DogFW/Engine/Core/App/IApp.h"
 
-namespace DogFW :: inline app
+namespace DogFW :: engine
 {
-	class Application : public IApplication
+	class App : public IApp
 	{
 	public:
-		Application();
-		~Application();
+		App();
+		~App();
 	public:
 		void initialize() override;
 		void update() override;

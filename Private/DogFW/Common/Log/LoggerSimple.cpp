@@ -33,7 +33,7 @@ namespace DogFW
 		vswprintf_s(buf, fmt, args);
 		va_end(args);
 
-		messages.push_back(WString(buf));
+		messages_.push_back(WString(buf));
 	}
 
 
@@ -46,7 +46,7 @@ namespace DogFW
 		va_start(args, fmt);
 		vswprintf_s(buf, fmt, args);
 		va_end(args);
-		messages.push_back(WString(buf));
+		messages_.push_back(WString(buf));
 		saveToFile();
 	}
 
@@ -69,12 +69,12 @@ namespace DogFW
 			//D_CRITERR(L"Cant open log file");
 		}
 
-		for (int i=0;i<messages.size();++i)
+		for (int i=0;i<messages_.size();++i)
 		{
-			outfile << messages[i] << std::endl;
+			outfile << messages_[i] << std::endl;
 
 		}
 		outfile.close();
-		messages.clear();
+		messages_.clear();
 	}
 }

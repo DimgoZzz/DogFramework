@@ -12,3 +12,11 @@ namespace DogFW :: inline basictypes
 	using	UInt32 = uint32_t;
 	using	UInt64 = uint64_t;
 }
+
+namespace DogFW::math
+{
+	Int8  abs (Int8  inV);
+	Int16 abs (Int16 inV);
+	Int32 abs (Int32 inV);
+	Int64 abs (Int64 inV);
+}

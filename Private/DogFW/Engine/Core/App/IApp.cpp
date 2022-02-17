@@ -1,9 +1,9 @@
 #include "DogFW/Engine/Core/App/IApp.h"
 
-namespace DogFW
+namespace DogFW :: engine
 {
-	IApplication::IApplication()
+	IApp::IApp()
 	{
 	}
-	IApplication::~IApplication() {};
+	IApp::~IApp() {};
 }
