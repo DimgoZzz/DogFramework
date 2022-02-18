@@ -5,3 +5,8 @@
 
 #include "DogFW/Common/Text/Char/DogChar.h"
 #include "DogFW/Common/Text/String/DogString.h"
+
+namespace DogFW::inline basictypes
+{
+
+}

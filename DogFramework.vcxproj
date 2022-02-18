@@ -11,7 +11,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Private\DogFW\Common\Math\Vector\PrimitiveInt2DVector.cpp" />
+    <ClCompile Include="Private\DogFW\Common\Math\Vector\Vector2IntP.cpp" />
     <ClCompile Include="Private\DogFW\Engine\Core\Window\IWindow.cpp" />
     <ClCompile Include="Private\DogFW\Common\Text\String\DogString.cpp" />
     <ClCompile Include="Private\DogFW\Engine\Core\App\AppSettings.cpp" />
@@ -25,13 +25,19 @@
     <ClCompile Include="Private\DogFW\Common\Math\Vector\SIMDVectorA.cpp" />
     <ClCompile Include="Private\DogFW\Common\Math\Vector\DogVector.cpp" />
     <ClCompile Include="Private\DogFW\Common\Math\Integer\DogInt.cpp" />
-    <ClCompile Include="Private\DogFW\External\Windows\DogWindows.cpp" />
     <ClCompile Include="Private\DogFW\Common\Time\StopWatch.cpp" />
     <ClCompile Include="Private\DogFW\Common\Time\Timer.cpp" />
+    <ClCompile Include="Private\DogFW\External\Windows\MsgWindows.cpp" />
     <ClCompile Include="Private\DogFW\Resources\DogFWIcon.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Public\DogFW\Common\Math\Vector\PrimitiveInt2DVector.h" />
+    <ClInclude Include="Public\DogFW\External\Other\EnvMacros.h" />
+    <ClInclude Include="Public\DogFW\Common\Math\Vector\Vector2FloatP.h" />
+    <ClInclude Include="Public\DogFW\Common\Math\Vector\Vector3FloatP.h" />
+    <ClInclude Include="Public\DogFW\Common\Math\Vector\Vector4FloatP.h" />
+    <ClInclude Include="Public\DogFW\Common\Math\Vector\Vector4IntP.h" />
+    <ClInclude Include="Public\DogFW\Common\Math\Vector\Vector2IntP.h" />
+    <ClInclude Include="Public\DogFW\Common\Math\Vector\Vector3IntP.h" />
     <ClInclude Include="Public\DogFW\DogMath.h" />
     <ClInclude Include="Public\DogFW\Engine\Core\Window\IWindow.h" />
     <ClInclude Include="Public\DogFW\Common\Text\String\DogString.h" />
@@ -46,11 +52,13 @@
     <ClInclude Include="Public\DogFW\Common\Math\Vector\DogVector.h" />
     <ClInclude Include="Public\DogFW\Common\Math\Integer\DogInt.h" />
     <ClInclude Include="Public\DogFW\External\DirectX\DogDirectX.h" />
+    <ClInclude Include="Public\DogFW\DogWin.h" />
     <ClInclude Include="Public\DogFW\External\Windows\DogWindows.h" />
     <ClInclude Include="Public\DogFW\Common\Time\StopWatch.h" />
     <ClInclude Include="Public\DogFW\Common\Math\Vector\SIMDVectorA.h" />
     <ClInclude Include="Public\DogFW\Common\Time\Timer.h" />
     <ClInclude Include="Public\DogFW\Common\Math\Vector\SIMDVector.h" />
+    <ClInclude Include="Public\DogFW\External\Windows\MsgWindows.h" />
     <ClInclude Include="Public\DogFW\Resources\DogResources.h" />
     <ClInclude Include="Public\DogFW\Resources\Icons\DogFWIcon.h" />
   </ItemGroup>
@@ -111,6 +119,7 @@
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <FloatingPointModel>Fast</FloatingPointModel>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -131,6 +140,7 @@
       <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
       <FloatingPointModel>Fast</FloatingPointModel>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

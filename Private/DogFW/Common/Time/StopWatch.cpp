@@ -1,5 +1,5 @@
 #include "DogFW/Common/Time/StopWatch.h"
-#include "DogFW/External/Windows/DogWindows.h"
+#include "DogFW/DogWin.h"
 
 using namespace DogFW;
 

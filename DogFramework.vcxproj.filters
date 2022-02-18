@@ -48,9 +48,6 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Private\DogFW\External\Windows\DogWindows.cpp">
-      <Filter>DogFW\External\Windows</Filter>
-    </ClCompile>
     <ClCompile Include="Private\DogFW\Engine\Core\App\AppSettings.cpp">
       <Filter>DogFW\Engine\Core</Filter>
     </ClCompile>
@@ -92,8 +89,9 @@
     </ClCompile>
     <ClCompile Include="Private\DogFW\Common\Text\String\DogString.cpp" />
     <ClCompile Include="Private\DogFW\Engine\Core\Window\IWindow.cpp" />
-    <ClCompile Include="Private\DogFW\Common\Math\Vector\PrimitiveInt2DVector.cpp" />
+    <ClCompile Include="Private\DogFW\Common\Math\Vector\Vector2IntP.cpp" />
     <ClCompile Include="Private\DogFW\Resources\DogFWIcon.cpp" />
+    <ClCompile Include="Private\DogFW\External\Windows\MsgWindows.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Public\DogFW\External\Windows\DogWindows.h">
@@ -147,8 +145,16 @@
     <ClInclude Include="Public\DogFW\Common\Text\String\DogString.h" />
     <ClInclude Include="Public\DogFW\Engine\Core\Window\IWindow.h" />
     <ClInclude Include="Public\DogFW\DogMath.h" />
-    <ClInclude Include="Public\DogFW\Common\Math\Vector\PrimitiveInt2DVector.h" />
+    <ClInclude Include="Public\DogFW\Common\Math\Vector\Vector2IntP.h" />
     <ClInclude Include="Public\DogFW\Resources\Icons\DogFWIcon.h" />
     <ClInclude Include="Public\DogFW\Resources\DogResources.h" />
+    <ClInclude Include="Public\DogFW\Common\Math\Vector\Vector3IntP.h" />
+    <ClInclude Include="Public\DogFW\Common\Math\Vector\Vector4IntP.h" />
+    <ClInclude Include="Public\DogFW\Common\Math\Vector\Vector2FloatP.h" />
+    <ClInclude Include="Public\DogFW\Common\Math\Vector\Vector3FloatP.h" />
+    <ClInclude Include="Public\DogFW\Common\Math\Vector\Vector4FloatP.h" />
+    <ClInclude Include="Public\DogFW\DogWin.h" />
+    <ClInclude Include="Public\DogFW\External\Windows\MsgWindows.h" />
+    <ClInclude Include="Public\DogFW\External\Other\EnvMacros.h" />
   </ItemGroup>
 </Project>

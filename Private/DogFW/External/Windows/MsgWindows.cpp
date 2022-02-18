@@ -1,4 +1,5 @@
-#include "DogFW/External/Windows/DogWindows.h"
+#pragma once
+#include "DogFW/External/Windows/MsgWindows.h"
 
 #include <comdef.h>
 
@@ -17,14 +18,14 @@ namespace DogFW::win
 	}
 	void msgWindow(WString wstr)
 	{
-		MessageBoxW(NULL, wstr.c_str(), L"Message Window", MB_OK| MB_ICONINFORMATION);
+		MessageBoxW(NULL, wstr.c_str(), L"Message Window", MB_OK | MB_ICONINFORMATION);
 	}
 
 	void msgWindow(HRESULT hr, String str)
 	{
 		_com_error error(hr);
 		String error_message = "Error:" + str + "\n" + string::toString(error.ErrorMessage());
-		
+
 		MessageBoxA(NULL, error_message.c_str(), "DebugTextWindow", MB_OK | MB_ICONWARNING);
 	}
 	void msgWindow(HRESULT hr, WString wstr)
@@ -35,6 +36,16 @@ namespace DogFW::win
 
 		MessageBoxW(NULL, error_message.c_str(), L"DebugTextWindow", MB_OK | MB_ICONWARNING);
 	}
+
+
+	void msgLastError()
+	{
+		_com_error error(GetLastError());
+		WString error_message = L"Error:\n" + WString(error.ErrorMessage());
+
+		MessageBoxW(NULL, error_message.c_str(), L"Last Error", MB_OK | MB_ICONINFORMATION);
+	}
+
 
 	void critError(String str)
 	{

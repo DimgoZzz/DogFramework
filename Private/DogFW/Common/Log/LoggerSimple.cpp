@@ -1,5 +1,5 @@
 #include "DogFW/Common/Log/LoggerSimple.h"
-#include "DogFW/External/Windows/DogWindows.h"
+#include "DogFW/DogWin.h"
 #include <stdarg.h>
 #include <fstream>
 
