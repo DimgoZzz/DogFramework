@@ -48,117 +48,83 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Private\DogFW\Engine\SystemApp\AppSettings.cpp">
-      <Filter>DogFW\Engine\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="Private\DogFW\Engine\SystemApp\App.cpp">
-      <Filter>DogFW\Engine\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="Private\DogFW\Engine\SystemApp\IApp.cpp">
-      <Filter>DogFW\Engine\Core</Filter>
-    </ClCompile>
-    <ClCompile Include="Private\DogFW\Common\Log\LoggerSimple.cpp">
-      <Filter>DogFW\Common\Log</Filter>
-    </ClCompile>
-    <ClCompile Include="Private\DogFW\Common\Time\StopWatch.cpp">
-      <Filter>DogFW\Common\Time</Filter>
-    </ClCompile>
-    <ClCompile Include="Private\DogFW\Common\Time\Timer.cpp">
-      <Filter>DogFW\Common\Time</Filter>
-    </ClCompile>
-    <ClCompile Include="Private\DogFW\Text\Char\DogChar.cpp">
+    <ClCompile Include="Private\DFW\Text\Char\Char.cpp">
       <Filter>DogFW\Common\Text</Filter>
     </ClCompile>
-    <ClCompile Include="Private\DogFW\Math\Vector\SIMDVector.cpp">
+    <ClCompile Include="Public\DFW\Math\Vector\Vector.h">
       <Filter>DogFW\Common\Math\Vector</Filter>
     </ClCompile>
-    <ClCompile Include="Private\DogFW\Math\Vector\SIMDVectorA.cpp">
-      <Filter>DogFW\Common\Math\Vector</Filter>
-    </ClCompile>
-    <ClCompile Include="Private\DogFW\Math\Vector\DogVector.cpp">
-      <Filter>DogFW\Common\Math\Vector</Filter>
-    </ClCompile>
-    <ClCompile Include="Private\DogFW\Math\Bool\DogBool.cpp">
+    <ClCompile Include="Private\DFW\Math\Bool\Bool.cpp">
       <Filter>DogFW\Common\Math\Bool</Filter>
     </ClCompile>
-    <ClCompile Include="Private\DogFW\Math\Integer\DogInt.cpp">
+    <ClCompile Include="Private\DFW\Math\Integer\Int.cpp">
       <Filter>DogFW\Common\Math\Integer</Filter>
     </ClCompile>
-    <ClCompile Include="Private\DogFW\Math\Float\DogFloat.cpp">
+    <ClCompile Include="Private\DFW\Math\Float\Float.cpp">
       <Filter>DogFW\Common\Math\Float</Filter>
     </ClCompile>
-    <ClCompile Include="Private\DogFW\Text\String\DogString.cpp" />
-    <ClCompile Include="Private\DogFW\Engine\SystemWindow\IWindow.cpp" />
-    <ClCompile Include="Private\DogFW\Math\Vector\Vector2IntP.cpp" />
-    <ClCompile Include="Private\DogFW\Resources\DogFWIcon.cpp" />
-    <ClCompile Include="Private\DogFW\External\Windows\MsgWindows.cpp" />
-    <ClCompile Include="Private\DogFW\Engine\EngineClasses\IEngine.cpp" />
-    <ClCompile Include="Private\DogFW\Engine\EngineClasses\EngineBasic.cpp" />
+    <ClCompile Include="Private\DFW\Text\String\String.cpp" />
+    <ClCompile Include="Private\DFW\Resources\Icons\IconMainDFW.cpp" />
+    <ClCompile Include="Private\DFW\External\Windows\DWMessageBox.cpp" />
+    <ClCompile Include="Private\DFW\External\Windows\DWError.cpp" />
+    <ClCompile Include="Private\DFW\Resources\Icons\LibIcons.cpp" />
+    <ClCompile Include="Private\DFW\Time\StopWatch.cpp" />
+    <ClCompile Include="Private\DFW\Utilities\Log\LoggerSimple.cpp" />
+    <ClCompile Include="Private\DFW\Time\TimerSimple.cpp" />
+    <ClCompile Include="Private\DEngine\EngineClasses\EngineBasic.cpp" />
+    <ClCompile Include="Private\DEngine\EngineClasses\IEngine.cpp" />
+    <ClCompile Include="Private\DEngine\SystemApp\App.cpp" />
+    <ClCompile Include="Private\DEngine\SystemApp\AppSettings.cpp" />
+    <ClCompile Include="Private\DEngine\SystemApp\IApp.cpp" />
+    <ClCompile Include="Private\DEngine\SystemWindow\IWindow.cpp" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="Public\DogFW\External\Windows\DogWindows.h">
+    <ClInclude Include="Public\DFW\External\Windows\DogWindows.h">
       <Filter>DogFW\External\Windows</Filter>
     </ClInclude>
-    <ClInclude Include="Public\DogFW\Engine\SystemApp\AppSettings.h">
-      <Filter>DogFW\Engine\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Public\DogFW\Engine\SystemApp\App.h">
-      <Filter>DogFW\Engine\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Public\DogFW\Engine\SystemApp\IApp.h">
-      <Filter>DogFW\Engine\Core</Filter>
-    </ClInclude>
-    <ClInclude Include="Public\DogFW\Common\Log\LoggerSimple.h">
-      <Filter>DogFW\Common\Log</Filter>
-    </ClInclude>
-    <ClInclude Include="Public\DogFW\Common\Time\Timer.h">
-      <Filter>DogFW\Common\Time</Filter>
-    </ClInclude>
-    <ClInclude Include="Public\DogFW\Common\Time\StopWatch.h">
-      <Filter>DogFW\Common\Time</Filter>
-    </ClInclude>
-    <ClInclude Include="Public\DogFW\Text\Char\DogChar.h">
+    <ClInclude Include="Public\DFW\Text\Char\Char.h">
       <Filter>DogFW\Common\Text</Filter>
     </ClInclude>
-    <ClInclude Include="Public\DogFW\Math\Vector\SIMDVectorA.h">
+    <ClInclude Include="Public\DFW\DVector.h">
       <Filter>DogFW\Common\Math\Vector</Filter>
     </ClInclude>
-    <ClInclude Include="Public\DogFW\Math\Vector\SIMDVector.h">
-      <Filter>DogFW\Common\Math\Vector</Filter>
-    </ClInclude>
-    <ClInclude Include="Public\DogFW\DogVector.h">
-      <Filter>DogFW\Common\Math\Vector</Filter>
-    </ClInclude>
-    <ClInclude Include="Public\DogFW\Math\Bool\DogBool.h">
+    <ClInclude Include="Public\DFW\Math\Bool\Bool.h">
       <Filter>DogFW\Common\Math\Bool</Filter>
     </ClInclude>
-    <ClInclude Include="Public\DogFW\Math\Integer\DogInt.h">
+    <ClInclude Include="Public\DFW\Math\Int\Int.h">
       <Filter>DogFW\Common\Math\Integer</Filter>
     </ClInclude>
-    <ClInclude Include="Public\DogFW\Math\Float\DogFloat.h">
+    <ClInclude Include="Public\DFW\Math\Float\Float.h">
       <Filter>DogFW\Common\Math\Float</Filter>
     </ClInclude>
-    <ClInclude Include="Public\DogFW\External\DirectX\DogDirectX.h">
+    <ClInclude Include="Public\DFW\External\DirectX\DogDirectX.h">
       <Filter>DogFW\External\DirectX</Filter>
     </ClInclude>
-    <ClInclude Include="Public\DogFW\DogBasicTypes.h">
+    <ClInclude Include="Public\DFW\DBasicTypes.h">
       <Filter>DogFW</Filter>
     </ClInclude>
-    <ClInclude Include="Public\DogFW\Text\String\DogString.h" />
-    <ClInclude Include="Public\DogFW\Engine\SystemWindow\IWindow.h" />
-    <ClInclude Include="Public\DogFW\DogMath.h" />
-    <ClInclude Include="Public\DogFW\Math\Vector\Vector2IntP.h" />
-    <ClInclude Include="Public\DogFW\Resources\Icons\DogFWIcon.h" />
-    <ClInclude Include="Public\DogFW\Resources\DogResources.h" />
-    <ClInclude Include="Public\DogFW\Math\Vector\Vector3IntP.h" />
-    <ClInclude Include="Public\DogFW\Math\Vector\Vector4IntP.h" />
-    <ClInclude Include="Public\DogFW\Math\Vector\Vector2FloatP.h" />
-    <ClInclude Include="Public\DogFW\Math\Vector\Vector3FloatP.h" />
-    <ClInclude Include="Public\DogFW\Math\Vector\Vector4FloatP.h" />
-    <ClInclude Include="Public\DogFW\DogWin.h" />
-    <ClInclude Include="Public\DogFW\External\Windows\MsgWindows.h" />
-    <ClInclude Include="Public\DogFW\External\Other\EnvMacros.h" />
-    <ClInclude Include="Public\DogFW\Engine\EngineClasses\IEngine.h" />
-    <ClInclude Include="Public\DogFW\Engine\EngineClasses\EngineBasic.h" />
+    <ClInclude Include="Public\DFW\Text\String\String.h" />
+    <ClInclude Include="Public\DFW\DMath.h" />
+    <ClInclude Include="Public\DFW\LibResources\Icons\IconMainDFW.h" />
+    <ClInclude Include="Public\DFW\LibResources\LibResources.h" />
+    <ClInclude Include="Public\DFW\DWin.h" />
+    <ClInclude Include="Public\DFW\Common\Macros\EnvMacros.h" />
+    <ClInclude Include="Public\DFW\DString.h" />
+    <ClInclude Include="Public\DFW\LibResources\Icons\LibIcons.h" />
+    <ClInclude Include="Public\DFW\External\Windows\DWError.h" />
+    <ClInclude Include="Public\DFW\DDev.h" />
+    <ClInclude Include="Public\DFW\External\Windows\DWMessageBox.h" />
+    <ClInclude Include="Public\DFW\DLibResources.h" />
+    <ClInclude Include="Public\DFW\Math\Vector\VectorP2.h" />
+    <ClInclude Include="Public\DFW\Common\BasicTypes.h" />
+    <ClInclude Include="Public\DFW\Time\StopWatch.h" />
+    <ClInclude Include="Public\DFW\Utilities\Log\LoggerSimple.h" />
+    <ClInclude Include="Public\DFW\Time\TimerSimple.h" />
+    <ClInclude Include="Public\DEngine\EngineClasses\EngineBasic.h" />
+    <ClInclude Include="Public\DEngine\EngineClasses\IEngine.h" />
+    <ClInclude Include="Public\DEngine\SystemApp\App.h" />
+    <ClInclude Include="Public\DEngine\SystemApp\AppSettings.h" />
+    <ClInclude Include="Public\DEngine\SystemApp\IApp.h" />
+    <ClInclude Include="Public\DEngine\SystemWindow\IWindow.h" />
   </ItemGroup>
 </Project>
