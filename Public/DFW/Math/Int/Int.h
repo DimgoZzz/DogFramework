@@ -13,7 +13,7 @@ namespace DogFW :: inline basictypes
 	using	UInt64	= uint64_t;
 }
 
-namespace DogFW :: math
+namespace DogFW :: inline math
 {
 	Int8  abs (Int8  inV);
 	Int16 abs (Int16 inV);

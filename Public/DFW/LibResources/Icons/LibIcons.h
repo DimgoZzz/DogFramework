@@ -8,5 +8,6 @@ namespace DogFW::libres
 	{
 		IconMainDFW = 0
 	};
+
 	HICON getIcon(EnLibIcons icon,Int32 iconSize = 0);
 }

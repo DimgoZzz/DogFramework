@@ -47,15 +47,15 @@ namespace DogFW:: inline engine
 	public:
 		WString getTitle() const;
 		void setTitle(WString inV);
-
-		Vector2IP getSize();
-		void setSize(Vector2IP inV);
+		
+		VectorI2P getSize();
+		void setSize(VectorI2P inV);
 
 		HWND& getHandle();
 
 		protected:
 		static WindowClass winClass_;
-		Vector2IP size_{ 480,480 };
+		VectorI2P size_{ 480,480 };
 		WString title_{ L"Unnamed Window" };
 		HWND handle_{ NULL };
 

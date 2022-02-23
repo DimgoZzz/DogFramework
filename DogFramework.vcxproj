@@ -17,6 +17,7 @@
     <ClCompile Include="Private\DEngine\SystemApp\AppSettings.cpp" />
     <ClCompile Include="Private\DEngine\SystemApp\IApp.cpp" />
     <ClCompile Include="Private\DEngine\SystemWindow\IWindow.cpp" />
+    <ClCompile Include="Private\DFW\Math\Vector\VectorF4S_XMF4.cpp" />
     <ClCompile Include="Private\DFW\Time\StopWatch.cpp" />
     <ClCompile Include="Private\DFW\Time\TimerSimple.cpp" />
     <ClCompile Include="Private\DFW\Utilities\Log\LoggerSimple.cpp" />
@@ -28,8 +29,8 @@
     <ClCompile Include="Private\DFW\Text\Char\Char.cpp" />
     <ClCompile Include="Public\DFW\Math\Vector\Vector.h" />
     <ClCompile Include="Private\DFW\Math\Integer\Int.cpp" />
-    <ClCompile Include="Private\DFW\Resources\Icons\IconMainDFW.cpp" />
-    <ClCompile Include="Private\DFW\Resources\Icons\LibIcons.cpp" />
+    <ClCompile Include="Private\DFW\LibResources\Icons\IconMainDFW.cpp" />
+    <ClCompile Include="Private\DFW\LibResources\Icons\LibIcons.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Public\DEngine\EngineClasses\EngineBasic.h" />
@@ -39,6 +40,8 @@
     <ClInclude Include="Public\DEngine\SystemApp\IApp.h" />
     <ClInclude Include="Public\DEngine\SystemWindow\IWindow.h" />
     <ClInclude Include="Public\DFW\Common\BasicTypes.h" />
+    <ClInclude Include="Public\DFW\DBasicTypes.h" />
+    <ClInclude Include="Public\DFW\Math\Vector\VectorF4S_XMF4.h" />
     <ClInclude Include="Public\DFW\Time\StopWatch.h" />
     <ClInclude Include="Public\DFW\Time\TimerSimple.h" />
     <ClInclude Include="Public\DFW\Utilities\Log\LoggerSimple.h" />
@@ -49,12 +52,11 @@
     <ClInclude Include="Public\DFW\External\Windows\DWMessageBox.h" />
     <ClInclude Include="Public\DFW\External\Windows\DWError.h" />
     <ClInclude Include="Public\DFW\DMath.h" />
-    <ClInclude Include="Public\DFW\Math\Vector\VectorP2.h" />
+    <ClInclude Include="Public\DFW\Math\Vector\Vector2P.h" />
     <ClInclude Include="Public\DFW\LibResources\Icons\LibIcons.h" />
     <ClInclude Include="Public\DFW\Text\String\String.h" />
     <ClInclude Include="Public\DFW\Math\Bool\Bool.h" />
     <ClInclude Include="Public\DFW\Math\Float\Float.h" />
-    <ClInclude Include="Public\DFW\DBasicTypes.h" />
     <ClInclude Include="Public\DFW\Text\Char\Char.h" />
     <ClInclude Include="Public\DFW\DVector.h" />
     <ClInclude Include="Public\DFW\Math\Int\Int.h" />
