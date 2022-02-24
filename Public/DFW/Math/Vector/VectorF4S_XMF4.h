@@ -23,7 +23,7 @@ namespace DogFW::inline math::inline vector::simdvector
 		//Assign Copy
 		VectorF4S_XMF4& operator=(VectorF4S_XMF4 const& in) noexcept;
 		//Assign Move
-		VectorF4S_XMF4& operator=(VectorF4S_XMF4 const&& in) noexcept;
+		VectorF4S_XMF4& operator=(VectorF4S_XMF4 && in) noexcept;
 
 	public:
 		//Returns Negative(Vector)

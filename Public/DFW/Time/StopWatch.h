@@ -18,6 +18,7 @@ namespace DogFW
 	private:
 		Double secondsPerTick_;
 
+		Bool stopped_;
 		Int64 startTick_;
 		Int64 stopTick_;
 	};

@@ -5,26 +5,42 @@ using namespace DogFW;
 
 StopWatch::StopWatch() :
 	startTick_(0),
-	stopTick_(0)
+	stopTick_(0),
+	stopped_(true)
 {
 	Int64 countsPerSec;
 	QueryPerformanceFrequency((LARGE_INTEGER*)&countsPerSec);
+	if (countsPerSec <= 0)
+	{
+		win::msgbox::critError(L"QueryPerformanceFrequency return 0!");
+	}
 	secondsPerTick_ = 1.0 / (Double)countsPerSec;
 }
 
 void DogFW::StopWatch::start()
 {
-	Int64 temp;
-	QueryPerformanceCounter((LARGE_INTEGER*)&temp);
-	startTick_ = temp;
+	if (stopped_)
+	{
+		Int64 temp;
+		if (QueryPerformanceCounter((LARGE_INTEGER*)&temp) == 0)
+		{
+			win::msgbox::critError(L"QueryPerformanceCounter return 0!");
+		}
+		startTick_ = temp;
+	}
 }
 
 void DogFW::StopWatch::stop()
 {
-	Int64 temp;
-	QueryPerformanceCounter((LARGE_INTEGER*)&temp);
-	stopTick_ = temp;
-
+	if (!stopped_)
+	{
+		Int64 temp;
+		if (QueryPerformanceCounter((LARGE_INTEGER*)&temp) == 0)
+		{
+			win::msgbox::critError(L"QueryPerformanceCounter return 0!");
+		}
+		stopTick_ = temp;
+	}
 }
 
 Int64 DogFW::StopWatch::getTickStart() const
@@ -35,7 +51,10 @@ Int64 DogFW::StopWatch::getTickStart() const
 Int64 StopWatch::getTickCurrent() const
 {
 	Int64 currTime;
-	QueryPerformanceCounter((LARGE_INTEGER*)&currTime);
+	if (QueryPerformanceCounter((LARGE_INTEGER*)&currTime) == 0)
+	{
+		win::msgbox::critError(L"QueryPerformanceCounter return 0!");
+	}
 	return currTime;
 }
 

@@ -13,6 +13,7 @@ namespace DogFW::inline math::inline vector::simdvector
 
 	VectorF4S_XMF4::VectorF4S_XMF4(const VectorF4S_XMF4& in) noexcept : xmFloat_(in.xmFloat_) {};
 	VectorF4S_XMF4::VectorF4S_XMF4(VectorF4S_XMF4&& in) noexcept : xmFloat_(in.xmFloat_) {};
+
 	VectorF4S_XMF4& VectorF4S_XMF4::operator=(VectorF4S_XMF4 const& in) noexcept
 	{
 		if (&in != this)
@@ -21,7 +22,7 @@ namespace DogFW::inline math::inline vector::simdvector
 		}
 		return *this;
 	};
-	VectorF4S_XMF4& VectorF4S_XMF4::operator=(VectorF4S_XMF4 const&& in) noexcept
+	VectorF4S_XMF4& VectorF4S_XMF4::operator=(VectorF4S_XMF4&& in) noexcept
 	{
 		if (&in != this)
 		{
