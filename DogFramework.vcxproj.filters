@@ -62,13 +62,15 @@
     <ClCompile Include="Private\DFW\Time\StopWatch.cpp" />
     <ClCompile Include="Private\DFW\Utilities\Log\LoggerSimple.cpp" />
     <ClCompile Include="Private\DFW\Time\TimerSimple.cpp" />
-    <ClCompile Include="Private\DEngine\EngineClasses\EngineBasic.cpp" />
+    <ClCompile Include="Private\DEngine\EngineClasses\EngineSimple.cpp" />
     <ClCompile Include="Private\DEngine\EngineClasses\IEngine.cpp" />
     <ClCompile Include="Private\DEngine\SystemApp\App.cpp" />
     <ClCompile Include="Private\DEngine\SystemApp\AppSettings.cpp" />
     <ClCompile Include="Private\DEngine\SystemApp\IApp.cpp" />
     <ClCompile Include="Private\DEngine\SystemWindow\IWindow.cpp" />
     <ClCompile Include="Private\DFW\Math\Vector\VectorF4S_XMF4.cpp" />
+    <ClCompile Include="Private\DEngine\SystemLog\SystemLog.cpp" />
+    <ClCompile Include="Private\DEngine\SystemFile\SystemFile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Public\DFW\Text\Char\Char.h">
@@ -103,7 +105,7 @@
     <ClInclude Include="Public\DFW\Time\StopWatch.h" />
     <ClInclude Include="Public\DFW\Utilities\Log\LoggerSimple.h" />
     <ClInclude Include="Public\DFW\Time\TimerSimple.h" />
-    <ClInclude Include="Public\DEngine\EngineClasses\EngineBasic.h" />
+    <ClInclude Include="Public\DEngine\EngineClasses\EngineSimple.h" />
     <ClInclude Include="Public\DEngine\EngineClasses\IEngine.h" />
     <ClInclude Include="Public\DEngine\SystemApp\App.h" />
     <ClInclude Include="Public\DEngine\SystemApp\AppSettings.h" />
@@ -113,5 +115,14 @@
     <ClInclude Include="Public\DFW\External\DirectX\DogDirectX.h" />
     <ClInclude Include="Public\DFW\External\Windows\DogWindows.h" />
     <ClInclude Include="Public\DFW\Math\Vector\VectorF4S_XMF4.h" />
+    <ClInclude Include="Public\DFW\Common\Patterns\ClassProperties.h" />
+    <ClInclude Include="Public\DFW\DBase.h" />
+    <ClInclude Include="Public\DFW\Common\Patterns.h" />
+    <ClInclude Include="Public\DEngine\DEngine.h" />
+    <ClInclude Include="Public\DEngine\SystemApp\SystemApp.h" />
+    <ClInclude Include="Public\DEngine\DSystems.h" />
+    <ClInclude Include="Public\DEngine\SystemWindow\SystemWindow.h" />
+    <ClInclude Include="Public\DEngine\SystemLog\SystemLog.h" />
+    <ClInclude Include="Public\DEngine\SystemFile\SystemFile.h" />
   </ItemGroup>
 </Project>
