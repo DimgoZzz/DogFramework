@@ -1,7 +1,7 @@
 #include "DFW/Text/Char/Char.h"
 #include <string>
 
-namespace DogFW::inline basictypes::chars
+namespace DogFW::basictypes::chars
 {
     const Char* srchLast(const Char *cArr, Char value)
     {

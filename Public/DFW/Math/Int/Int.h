@@ -1,7 +1,7 @@
 #pragma once
 #include <stdint.h>
 
-namespace DogFW :: inline basictypes
+namespace DogFW::basictypes
 {
 	using	Int8	= int8_t;
 	using	Int16	= int16_t;
@@ -13,10 +13,10 @@ namespace DogFW :: inline basictypes
 	using	UInt64	= uint64_t;
 }
 
-namespace DogFW :: inline math
+namespace DogFW::math
 {
-	Int8  abs (Int8  inV);
-	Int16 abs (Int16 inV);
-	Int32 abs (Int32 inV);
-	Int64 abs (Int64 inV);
+	basictypes::Int8  abs (basictypes::Int8  inV);
+	basictypes::Int16 abs (basictypes::Int16 inV);
+	basictypes::Int32 abs (basictypes::Int32 inV);
+	basictypes::Int64 abs (basictypes::Int64 inV);
 }

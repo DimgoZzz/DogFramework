@@ -2,7 +2,7 @@
 
 #include <comdef.h>
 
-namespace DogFW:: win :: msgbox
+namespace DogFW::win::msgbox
 {
 	void info(WString wstr)
 	{

@@ -2,7 +2,7 @@
 
 #include <comdef.h>
 
-namespace DogFW:: win :: error
+namespace DogFW::win::error
 {
 	WString getErrorDesc(DWORD errorMessageID)
 	{

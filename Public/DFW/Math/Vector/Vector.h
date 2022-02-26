@@ -1,14 +1,14 @@
 #pragma once
 #include "DFW/DBasicTypes.h"
 
-#include "DFW/Math/Vector/Vector2P.h"
+#include "DFW/Math/Vector/SimpleVector2.h"
 
-#include "DFW/Math/Vector/VectorF4S_XMF4.h"
+#include "DFW/Math/Vector/SimdVector4F.h"
 
-namespace DogFW::inline math:: inline vector
+namespace DogFW::vector
 {
-	using VectorI2P = Vector2P<Int32>;
-	using VectorF2P = Vector2P<Float>;
+	using VectorI2P = simple::Vector2<Int32>;
+	using VectorF2P = simple::Vector2<Float>;
 
-	using VectorF4S = simdvector::VectorF4S_XMF4;
+	using VectorF4S = simd::Vector4F;
 }

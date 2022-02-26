@@ -3,10 +3,10 @@
 
 namespace DogFW
 {
-	class StopWatch
+	class Stopwatch
 	{
 	public:
-		StopWatch();
+		Stopwatch();
 
 		void start();
 		void stop();

@@ -3,7 +3,7 @@
 
 #include <vector>
 
-namespace DogFW :: string
+namespace DogFW::stdstring::string
 {
 	//String Convertion
 	String toString(const WString& wstr)

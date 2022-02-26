@@ -3,7 +3,7 @@
 #include "DFW/DString.h"
 #include "DFW/External/Windows/DogWindows.h"
 
-namespace DogFW:: win :: error
+namespace DogFW::win::error
 {
 	WString getErrorDesc(DWORD errorMessageID);
 }

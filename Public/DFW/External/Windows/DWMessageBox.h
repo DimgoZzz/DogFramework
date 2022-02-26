@@ -5,12 +5,12 @@
 
 #pragma region Macros
 
-#define D_CRITERR(x) DogFW::win::dmsgbox::showCritError(DogFW::string::format(L"Error: %s \n%s",x,D_FILELINEW_))
-#define D_WARNING(x) DogFW::win::dmsgbox::showWarning(DogFW::string::format(L"Error: %s \n%s",x,D_FILELINEW_))
+#define D_CRITERR(x) DogFW::win::msgbox::showCritError(DogFW::string::format(L"Error: %s \n%s",x,D_FILELINEW_))
+#define D_WARNING(x) DogFW::win::msgbox::showWarning(DogFW::string::format(L"Error: %s \n%s",x,D_FILELINEW_))
 
 #pragma endregion Macros
 
-namespace DogFW:: win :: msgbox 
+namespace DogFW::win::msgbox 
 {
 	void info(WString wstr);
 	void infoHResult(HRESULT hr, WString wstr);

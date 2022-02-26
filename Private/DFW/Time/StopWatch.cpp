@@ -1,9 +1,9 @@
-#include "DFW/Time/StopWatch.h"
+#include "DFW/Time/Stopwatch.h"
 #include "DFW/DWin.h"
 
 using namespace DogFW;
 
-StopWatch::StopWatch() :
+Stopwatch::Stopwatch() :
 	startTick_(0),
 	stopTick_(0),
 	stopped_(true)
@@ -17,7 +17,7 @@ StopWatch::StopWatch() :
 	secondsPerTick_ = 1.0 / (Double)countsPerSec;
 }
 
-void DogFW::StopWatch::start()
+void DogFW::Stopwatch::start()
 {
 	if (stopped_)
 	{
@@ -30,7 +30,7 @@ void DogFW::StopWatch::start()
 	}
 }
 
-void DogFW::StopWatch::stop()
+void DogFW::Stopwatch::stop()
 {
 	if (!stopped_)
 	{
@@ -43,12 +43,12 @@ void DogFW::StopWatch::stop()
 	}
 }
 
-Int64 DogFW::StopWatch::getTickStart() const
+Int64 DogFW::Stopwatch::getTickStart() const
 {
 	return startTick_;
 }
 
-Int64 StopWatch::getTickCurrent() const
+Int64 Stopwatch::getTickCurrent() const
 {
 	Int64 currTime;
 	if (QueryPerformanceCounter((LARGE_INTEGER*)&currTime) == 0)
@@ -58,12 +58,12 @@ Int64 StopWatch::getTickCurrent() const
 	return currTime;
 }
 
-Int64 DogFW::StopWatch::getTickElapsed() const
+Int64 DogFW::Stopwatch::getTickElapsed() const
 {
 	return stopTick_ - startTick_;
 }
 
-Float DogFW::StopWatch::getTimeElapsed() const
+Float DogFW::Stopwatch::getTimeElapsed() const
 {
 	return static_cast<Float>(((Double)getTickElapsed())*secondsPerTick_);
 }

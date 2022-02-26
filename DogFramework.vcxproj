@@ -17,7 +17,7 @@
     <ClCompile Include="Private\DEngine\SystemApp\AppSettings.cpp" />
     <ClCompile Include="Private\DEngine\SystemApp\IApp.cpp" />
     <ClCompile Include="Private\DEngine\SystemWindow\IWindow.cpp" />
-    <ClCompile Include="Private\DFW\Math\Vector\VectorF4S_XMF4.cpp" />
+    <ClCompile Include="Private\DFW\Math\Vector\SimdVector4F.cpp" />
     <ClCompile Include="Private\DFW\Time\StopWatch.cpp" />
     <ClCompile Include="Private\DFW\Time\TimerSimple.cpp" />
     <ClCompile Include="Private\DFW\Utilities\Log\LoggerSimple.cpp" />
@@ -50,7 +50,7 @@
     <ClInclude Include="Public\DFW\Common\Patterns\ClassProperties.h" />
     <ClInclude Include="Public\DFW\DBase.h" />
     <ClInclude Include="Public\DFW\DBasicTypes.h" />
-    <ClInclude Include="Public\DFW\Math\Vector\VectorF4S_XMF4.h" />
+    <ClInclude Include="Public\DFW\Math\Vector\SimdVector4F.h" />
     <ClInclude Include="Public\DFW\Time\StopWatch.h" />
     <ClInclude Include="Public\DFW\Time\TimerSimple.h" />
     <ClInclude Include="Public\DFW\Utilities\Log\LoggerSimple.h" />
@@ -61,7 +61,7 @@
     <ClInclude Include="Public\DFW\External\Windows\DWMessageBox.h" />
     <ClInclude Include="Public\DFW\External\Windows\DWError.h" />
     <ClInclude Include="Public\DFW\DMath.h" />
-    <ClInclude Include="Public\DFW\Math\Vector\Vector2P.h" />
+    <ClInclude Include="Public\DFW\Math\Vector\SimpleVector2.h" />
     <ClInclude Include="Public\DFW\LibResources\Icons\LibIcons.h" />
     <ClInclude Include="Public\DFW\Text\String\String.h" />
     <ClInclude Include="Public\DFW\Math\Bool\Bool.h" />
