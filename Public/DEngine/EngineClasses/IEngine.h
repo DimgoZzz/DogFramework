@@ -1,12 +1,15 @@
 #pragma once
 #include "DFW/DBase.h"
 #include "DFW/DWin.h"
+#include "DFW/DPointer.h" 
+
 #include "DEngine/DSystems.h"
 
 
-namespace DogFW:: inline engine
+namespace DogFW::engine
 {
-	class IEngine : private NonCopyable , private NonMoveable
+	class IEngine : private patterns::NonCopyable ,
+					private patterns::NonMoveable
 	{
 	public:
 		IEngine();
@@ -14,7 +17,7 @@ namespace DogFW:: inline engine
 
 
 		void init();
-		static IEngine* get();
+		static IEngine * get();
 	//Public Api
 	public:
 		HINSTANCE getHInst();
@@ -40,10 +43,10 @@ namespace DogFW:: inline engine
 		static IEngine* engptr_;
 		HINSTANCE hInst_;
 
-		SystemFile* sysFile_;
-		SystemLog* sysLog_;
-		SystemApp* sysApp_;
-		SystemWindow* sysWindow_;
+		UniquePtr<SystemFile> sysFile_;
+		UniquePtr<SystemLog> sysLog_;
+		UniquePtr<SystemApp> sysApp_;
+		UniquePtr<SystemWindow> sysWindow_;
 	};
 }
 

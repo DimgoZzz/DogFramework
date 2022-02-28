@@ -1,10 +1,9 @@
 #pragma once
 
-#ifdef D_ENGINE_SIMPLE
 #include "DEngine/EngineClasses/EngineSimple.h"
 
-namespace DogFW::inline engine
+namespace DogFW
 {
+	using namespace DogFW::engine;
 	using DEngine = EngineSimple;
 }
-#endif

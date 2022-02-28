@@ -21,10 +21,10 @@ namespace DogFW::engine
 		return static_cast<EngineSimple*>(engptr_);
 	}
 
-	SystemFile* EngineSimple::getSystemFile() { return sysFile_; }
-	SystemLog* EngineSimple::getSystemLog() { return sysLog_; }
-	SystemApp* EngineSimple::getSystemApp() { return sysApp_; }
-	SystemWindow* EngineSimple::getSystemWindow() { return sysWindow_; };
+	SystemFile* EngineSimple::getSystemFile() { return sysFile_.get(); }
+	SystemLog* EngineSimple::getSystemLog() { return sysLog_.get(); }
+	SystemApp* EngineSimple::getSystemApp() { return sysApp_.get(); }
+	SystemWindow* EngineSimple::getSystemWindow() { return sysWindow_.get(); };
 
 #pragma endregion Public Api
 

@@ -12,13 +12,13 @@
 
 namespace DogFW::win::msgbox 
 {
-	void info(WString wstr);
+	void info(WString wstr = L"");
 	void infoHResult(HRESULT hr, WString wstr);
-	void warning(WString wstr);
+	void warning(WString wstr = L"");
 	void warningHResult(HRESULT hr, WString wstr);
 	void infoLastError();
 
-	void critError(WString str);
+	void critError(WString str = L"");
 
 	//void critError(HRESULT hr, WString str);
 }

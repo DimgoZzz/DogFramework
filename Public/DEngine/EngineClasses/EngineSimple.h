@@ -1,7 +1,7 @@
 #pragma once
 #include "DEngine/EngineClasses/IEngine.h"
 
-namespace DogFW:: inline engine
+namespace DogFW::engine
 {
 	class EngineSimple:public IEngine
 	{

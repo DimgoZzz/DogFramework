@@ -59,7 +59,7 @@
     <ClCompile Include="Private\DFW\External\Windows\DWMessageBox.cpp" />
     <ClCompile Include="Private\DFW\External\Windows\DWError.cpp" />
     <ClCompile Include="Private\DFW\LibResources\Icons\LibIcons.cpp" />
-    <ClCompile Include="Private\DFW\Time\StopWatch.cpp" />
+    <ClCompile Include="Private\DFW\Time\Stopwatch.cpp" />
     <ClCompile Include="Private\DFW\Utilities\Log\LoggerSimple.cpp" />
     <ClCompile Include="Private\DFW\Time\TimerSimple.cpp" />
     <ClCompile Include="Private\DEngine\EngineClasses\EngineSimple.cpp" />
@@ -102,7 +102,7 @@
     <ClInclude Include="Public\DFW\DLibResources.h" />
     <ClInclude Include="Public\DFW\Math\Vector\SimpleVector2.h" />
     <ClInclude Include="Public\DFW\Common\BasicTypes.h" />
-    <ClInclude Include="Public\DFW\Time\StopWatch.h" />
+    <ClInclude Include="Public\DFW\Time\Stopwatch.h" />
     <ClInclude Include="Public\DFW\Utilities\Log\LoggerSimple.h" />
     <ClInclude Include="Public\DFW\Time\TimerSimple.h" />
     <ClInclude Include="Public\DEngine\EngineClasses\EngineSimple.h" />
@@ -124,5 +124,8 @@
     <ClInclude Include="Public\DEngine\SystemWindow\SystemWindow.h" />
     <ClInclude Include="Public\DEngine\SystemLog\SystemLog.h" />
     <ClInclude Include="Public\DEngine\SystemFile\SystemFile.h" />
+    <ClInclude Include="Public\DFW\Memory\UniquePtr.h" />
+    <ClInclude Include="Public\DFW\DPointer.h" />
+    <ClInclude Include="Public\DFW\DMemory.h" />
   </ItemGroup>
 </Project>

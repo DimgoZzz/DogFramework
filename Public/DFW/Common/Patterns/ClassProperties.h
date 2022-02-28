@@ -1,6 +1,6 @@
 #pragma once
 
-namespace DogFW::inline patterns
+namespace DogFW::patterns
 {
 	class NonCopyable
 	{

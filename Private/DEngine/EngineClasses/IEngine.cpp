@@ -1,6 +1,6 @@
 #include "DEngine/EngineClasses/IEngine.h"
 
-namespace DogFW:: inline engine
+namespace DogFW::engine
 {    
     IEngine* IEngine::engptr_ {nullptr};
 
@@ -32,10 +32,10 @@ namespace DogFW:: inline engine
         return hInst_;
     };
 
-    SystemFile* IEngine::getSystemFile() { return sysFile_; }
-    SystemLog* IEngine::getSystemLog() { return sysLog_; }
-    SystemApp* IEngine::getSystemApp() { return sysApp_; }
-    SystemWindow* IEngine::getSystemWindow() { return sysWindow_; };
+    SystemFile* IEngine::getSystemFile() { return sysFile_.get(); }
+    SystemLog* IEngine::getSystemLog() { return sysLog_.get(); }
+    SystemApp* IEngine::getSystemApp() { return sysApp_.get(); }
+    SystemWindow* IEngine::getSystemWindow() { return sysWindow_.get(); };
 
 #pragma endregion Publi Api
 
