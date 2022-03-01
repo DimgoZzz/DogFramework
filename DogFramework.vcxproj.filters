@@ -62,7 +62,7 @@
     <ClCompile Include="Private\DFW\Time\Stopwatch.cpp" />
     <ClCompile Include="Private\DFW\Utilities\Log\LoggerSimple.cpp" />
     <ClCompile Include="Private\DFW\Time\TimerSimple.cpp" />
-    <ClCompile Include="Private\DEngine\EngineClasses\EngineSimple.cpp" />
+    <ClCompile Include="Private\DEngine\EngineClasses\EngineExample.cpp" />
     <ClCompile Include="Private\DEngine\EngineClasses\IEngine.cpp" />
     <ClCompile Include="Private\DEngine\SystemApp\App.cpp" />
     <ClCompile Include="Private\DEngine\SystemApp\AppSettings.cpp" />
@@ -71,6 +71,10 @@
     <ClCompile Include="Private\DFW\Math\Vector\SimdVector4F.cpp" />
     <ClCompile Include="Private\DEngine\SystemLog\SystemLog.cpp" />
     <ClCompile Include="Private\DEngine\SystemFile\SystemFile.cpp" />
+    <ClCompile Include="Private\DEngine\SystemFile\FileTypes\Directory.cpp" />
+    <ClCompile Include="Private\DEngine\SystemFile\FileTypes\FSObject.cpp" />
+    <ClCompile Include="Private\DEngine\SystemFile\Path.cpp" />
+    <ClCompile Include="Private\DEngine\SystemFile\FileTypes\File.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Public\DFW\Text\Char\Char.h">
@@ -105,7 +109,7 @@
     <ClInclude Include="Public\DFW\Time\Stopwatch.h" />
     <ClInclude Include="Public\DFW\Utilities\Log\LoggerSimple.h" />
     <ClInclude Include="Public\DFW\Time\TimerSimple.h" />
-    <ClInclude Include="Public\DEngine\EngineClasses\EngineSimple.h" />
+    <ClInclude Include="Public\DEngine\EngineClasses\EngineExample.h" />
     <ClInclude Include="Public\DEngine\EngineClasses\IEngine.h" />
     <ClInclude Include="Public\DEngine\SystemApp\App.h" />
     <ClInclude Include="Public\DEngine\SystemApp\AppSettings.h" />
@@ -127,5 +131,10 @@
     <ClInclude Include="Public\DFW\Memory\UniquePtr.h" />
     <ClInclude Include="Public\DFW\DPointer.h" />
     <ClInclude Include="Public\DFW\DMemory.h" />
+    <ClInclude Include="Public\DEngine\SystemFile\FileTypes\Directory.h" />
+    <ClInclude Include="Public\DEngine\SystemFile\FileTypes\FSObject.h" />
+    <ClInclude Include="Public\DEngine\SystemFile\Path.h" />
+    <ClInclude Include="Public\DEngine\SystemFile\FileTypes\File.h" />
+    <ClInclude Include="Public\DEngine\SystemFile\FileTypes.h" />
   </ItemGroup>
 </Project>

@@ -11,7 +11,11 @@
     </ProjectConfiguration>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="Private\DEngine\EngineClasses\EngineSimple.cpp" />
+    <ClCompile Include="Private\DEngine\SystemFile\FileTypes\File.cpp" />
+    <ClCompile Include="Private\DEngine\SystemFile\Path.cpp" />
+    <ClCompile Include="Private\DEngine\SystemFile\FileTypes\FSObject.cpp" />
+    <ClCompile Include="Private\DEngine\SystemFile\FileTypes\Directory.cpp" />
+    <ClCompile Include="Private\DEngine\EngineClasses\EngineExample.cpp" />
     <ClCompile Include="Private\DEngine\EngineClasses\IEngine.cpp" />
     <ClCompile Include="Private\DEngine\SystemApp\App.cpp" />
     <ClCompile Include="Private\DEngine\SystemApp\AppSettings.cpp" />
@@ -35,10 +39,15 @@
     <ClCompile Include="Private\DEngine\SystemLog\SystemLog.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Public\DEngine\SystemFile\FileTypes.h" />
+    <ClInclude Include="Public\DEngine\SystemFile\FileTypes\File.h" />
+    <ClInclude Include="Public\DEngine\SystemFile\Path.h" />
+    <ClInclude Include="Public\DEngine\SystemFile\FileTypes\FSObject.h" />
+    <ClInclude Include="Public\DEngine\SystemFile\FileTypes\Directory.h" />
     <ClInclude Include="Public\DEngine\DSystems.h" />
     <ClInclude Include="Public\DEngine\SystemApp\SystemApp.h" />
     <ClInclude Include="Public\DEngine\DEngine.h" />
-    <ClInclude Include="Public\DEngine\EngineClasses\EngineSimple.h" />
+    <ClInclude Include="Public\DEngine\EngineClasses\EngineExample.h" />
     <ClInclude Include="Public\DEngine\EngineClasses\IEngine.h" />
     <ClInclude Include="Public\DEngine\SystemApp\App.h" />
     <ClInclude Include="Public\DEngine\SystemApp\AppSettings.h" />

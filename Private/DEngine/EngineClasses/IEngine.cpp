@@ -2,9 +2,10 @@
 
 namespace DogFW::engine
 {    
+
+#pragma region Class_bases
     IEngine* IEngine::engptr_ {nullptr};
 
-#pragma region Constructors
     IEngine::IEngine()
     {
         hInst_ = GetModuleHandle(NULL);
@@ -15,32 +16,18 @@ namespace DogFW::engine
     {
         engptr_ = nullptr;
     };
-#pragma endregion Constructors
 
-#pragma region Public Api
-    void IEngine::init()
-    {
-        initSystems();
-    }
     IEngine * IEngine::get()
     {
         return engptr_;
     }
-
-    HINSTANCE IEngine::getHInst()
+    void IEngine::init()
     {
-        return hInst_;
-    };
+        initSystems();
+    }
+#pragma endregion Class_bases
 
-    SystemFile* IEngine::getSystemFile() { return sysFile_.get(); }
-    SystemLog* IEngine::getSystemLog() { return sysLog_.get(); }
-    SystemApp* IEngine::getSystemApp() { return sysApp_.get(); }
-    SystemWindow* IEngine::getSystemWindow() { return sysWindow_.get(); };
-
-#pragma endregion Publi Api
-
-
-#pragma region Protected Functions
+#pragma region Systems
 
     void IEngine::initSystems()
     {
@@ -50,8 +37,20 @@ namespace DogFW::engine
         initSystemWindow();
     }
 
-#pragma endregion Protected Functions
+    SystemFile* IEngine::getSystemFile() { return sysFile_.get(); }
+    SystemLog* IEngine::getSystemLog() { return sysLog_.get(); }
+    SystemApp* IEngine::getSystemApp() { return sysApp_.get(); }
+    SystemWindow* IEngine::getSystemWindow() { return sysWindow_.get(); };
+#pragma endregion Systems
 
+#pragma region Public Api
+
+    HINSTANCE IEngine::getHInst()
+    {
+        return hInst_;
+    };
+
+#pragma endregion Public Api
 
 }
 

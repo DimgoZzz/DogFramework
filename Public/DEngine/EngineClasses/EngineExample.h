@@ -3,13 +3,13 @@
 
 namespace DogFW::engine
 {
-	class EngineSimple:public IEngine
+	class EngineExample:public IEngine
 	{
 	public:
-		EngineSimple();
-		~EngineSimple();
+		EngineExample();
+		~EngineExample();
 	 
-		static EngineSimple* get();
+		static EngineExample* get();
 
 	public:
 		SystemFile* getSystemFile();

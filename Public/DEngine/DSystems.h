@@ -3,3 +3,8 @@
 #include "DEngine/SystemLog/SystemLog.h"
 #include "DEngine/SystemWindow/SystemWindow.h"
 #include "DEngine/SystemApp/SystemApp.h"
+
+namespace DogFW
+{
+	using namespace DogFW::systems;
+}
