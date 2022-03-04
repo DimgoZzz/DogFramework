@@ -2,10 +2,9 @@
 #include "DFW/DBasicTypes.h"
 #include <string>
 
-namespace DogFW::stdstring
+
+namespace DogFW::stdstring::string
 {
-	namespace string
-	{
 	using String = std::string;
 	using WString = std::wstring;
 
@@ -14,8 +13,10 @@ namespace DogFW::stdstring
 		
 	String format(const Char* fmt, ...);
 	WString format(const WChar* fmt, ...);
-	}
+}
+
+namespace DogFW::stdstring
+{
 	using string::String;
 	using string::WString;
 }
-

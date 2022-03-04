@@ -1,9 +1,8 @@
 #pragma once
 
-#include "DEngine/EngineClasses/EngineExample.h"
+#include "DEngine/Engine/IEngine.h"
 
 namespace DogFW
 {
 	using namespace DogFW::engine;
-	using DEngine = EngineExample;
 }

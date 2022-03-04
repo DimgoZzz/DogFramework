@@ -1,10 +1,14 @@
 #pragma once
-#include "DEngine/SystemFile/SystemFile.h"
-#include "DEngine/SystemLog/SystemLog.h"
-#include "DEngine/SystemWindow/SystemWindow.h"
-#include "DEngine/SystemApp/SystemApp.h"
+#include "DEngine/Systems/File/FileSystem.h"
+#include "DEngine/Systems/Log/LogSystem.h"
+#include "DEngine/Systems/Window/WindowSystem.h"
+#include "DEngine/Systems/App/AppSystem.h"
 
 namespace DogFW
 {
-	using namespace DogFW::systems;
+	using namespace DogFW::filesystem;
+	using namespace DogFW::logsystem;
+	using namespace DogFW::appsystem;
+	using namespace DogFW::windowsystem;
+
 }
