@@ -1,7 +1,7 @@
 #pragma once
 #include "DFW/DString.h"
 
-namespace DogFW::file
+namespace DogFW::filesystem
 {
 	class Path
 	{

@@ -1,9 +1,9 @@
 #pragma once
 #include "DFW/DBasicTypes.h"
 
-#include "DFW/Files/Path.h"
+#include "DFW/FileSystem/Path.h"
 
-namespace DogFW :: file
+namespace DogFW :: filesystem
 {
 	class FileObject
 	{

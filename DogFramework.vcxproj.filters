@@ -55,7 +55,7 @@
       <Filter>DogFW\Math\Float</Filter>
     </ClCompile>
     <ClCompile Include="Private\DFW\Text\String\String.cpp" />
-    <ClCompile Include="Private\DFW\LibResources\Icons\IconMainDFW.cpp" />
+    <ClCompile Include="Private\DFW\LibResources\Icons\IconDFWMain.cpp" />
     <ClCompile Include="Private\DFW\External\Windows\DWMessageBox.cpp" />
     <ClCompile Include="Private\DFW\External\Windows\DWError.cpp" />
     <ClCompile Include="Private\DFW\LibResources\Icons\LibIcons.cpp" />
@@ -69,10 +69,10 @@
     <ClCompile Include="Private\DFW\Math\Vector\SimdVector4F.cpp" />
     <ClCompile Include="Private\DEngine\Systems\Log\SystemLog.cpp" />
     <ClCompile Include="Private\DEngine\Systems\File\SystemFile.cpp" />
-    <ClCompile Include="Private\DFW\Files\FileTypes\Directory.cpp" />
-    <ClCompile Include="Private\DFW\Files\FileTypes\Object.cpp" />
-    <ClCompile Include="Private\DFW\Files\Path.cpp" />
-    <ClCompile Include="Private\DFW\Files\FileTypes\File.cpp" />
+    <ClCompile Include="Private\DFW\FileSystem\FileTypes\Directory.cpp" />
+    <ClCompile Include="Private\DFW\FileSystem\FileTypes\Object.cpp" />
+    <ClCompile Include="Private\DFW\FileSystem\Path.cpp" />
+    <ClCompile Include="Private\DFW\FileSystem\FileTypes\File.cpp" />
     <ClCompile Include="Private\DEngine\Settings\ProjectSettings.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -93,7 +93,7 @@
     </ClInclude>
     <ClInclude Include="Public\DFW\Text\String\String.h" />
     <ClInclude Include="Public\DFW\DMath.h" />
-    <ClInclude Include="Public\DFW\LibResources\Icons\IconMainDFW.h" />
+    <ClInclude Include="Public\DFW\LibResources\Icons\IconDFWMain.h" />
     <ClInclude Include="Public\DFW\LibResources\LibResources.h" />
     <ClInclude Include="Public\DFW\DWin.h" />
     <ClInclude Include="Public\DFW\Common\Macros\EnvMacros.h" />
@@ -116,7 +116,7 @@
     <ClInclude Include="Public\DFW\External\DirectX\DogDirectX.h" />
     <ClInclude Include="Public\DFW\External\Windows\DogWindows.h" />
     <ClInclude Include="Public\DFW\Math\Vector\SimdVector4F.h" />
-    <ClInclude Include="Public\DFW\Common\Patterns\ClassProperties.h" />
+    <ClInclude Include="Public\DFW\Common\Patterns\ClassTemplates.h" />
     <ClInclude Include="Public\DFW\DBase.h" />
     <ClInclude Include="Public\DFW\Common\Patterns.h" />
     <ClInclude Include="Public\DEngine\DEngine.h" />
@@ -125,16 +125,22 @@
     <ClInclude Include="Public\DEngine\Systems\Window\WindowSystem.h" />
     <ClInclude Include="Public\DEngine\Systems\Log\LogSystem.h" />
     <ClInclude Include="Public\DEngine\Systems\File\FileSystem.h" />
-    <ClInclude Include="Public\DFW\Memory\UniquePtr.h" />
+    <ClInclude Include="Public\DFW\Memory\Pointer\UniquePtr.h" />
     <ClInclude Include="Public\DFW\DPointer.h" />
     <ClInclude Include="Public\DFW\DMemory.h" />
-    <ClInclude Include="Public\DFW\Files\FileTypes\Directory.h" />
-    <ClInclude Include="Public\DFW\Files\FileTypes\FileObject.h" />
-    <ClInclude Include="Public\DFW\Files\Path.h" />
-    <ClInclude Include="Public\DFW\Files\FileTypes\File.h" />
-    <ClInclude Include="Public\DFW\Files\FileTypes.h" />
+    <ClInclude Include="Public\DFW\FileSystem\FileTypes\Directory.h" />
+    <ClInclude Include="Public\DFW\FileSystem\FileTypes\FileObject.h" />
+    <ClInclude Include="Public\DFW\FileSystem\Path.h" />
+    <ClInclude Include="Public\DFW\FileSystem\FileTypes\File.h" />
+    <ClInclude Include="Public\DFW\FileSystem\FileTypes.h" />
     <ClInclude Include="Public\DEngine\Settings\ProjectSettings.h" />
     <ClInclude Include="Public\DEngine\DSettings.h" />
-    <ClInclude Include="Public\DFW\DFiles.h" />
+    <ClInclude Include="Public\DFW\DFileSystem.h" />
+    <ClInclude Include="Public\DFW\Memory\Allocator\AllocatorBasic.h" />
+    <ClInclude Include="Public\DFW\Memory\Allocator\AllocMy.h" />
+    <ClInclude Include="Public\DFW\Memory\Allocator\AllocPoolLocal.h" />
+    <ClInclude Include="Public\DFW\Containers\List.h" />
+    <ClInclude Include="Public\DFW\Containers\Pair.h" />
+    <ClInclude Include="Public\DFW\DContainers.h" />
   </ItemGroup>
 </Project>

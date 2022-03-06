@@ -1,2 +1,7 @@
 #pragma once
-#include "DFW/Memory/UniquePtr.h"
+#include "DFW/Memory/Pointer/UniquePtr.h"
+
+namespace DogFW
+{
+	using namespace DogFW::memory;
+}

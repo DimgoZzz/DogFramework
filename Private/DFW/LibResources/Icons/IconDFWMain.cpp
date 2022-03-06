@@ -1,10 +1,10 @@
-#include "DFW/LibResources/Icons/IconMainDFW.h"
+#include "DFW/LibResources/Icons/IconDFWMain.h"
 
 
 extern DogFW::Int32 iconMainDFWSize;
 extern BYTE iconMainDFW[];
 
-HICON DogFW::libres::icon::getMainDFW(Int32 iconSize)
+HICON DogFW::libres::icons::getDFWMain(Int32 iconSize)
 {
     int offset;
     static HICON hIcon = NULL;
@@ -19,7 +19,6 @@ HICON DogFW::libres::icon::getMainDFW(Int32 iconSize)
         }
     }
     return hIcon;
-
 }
 
 

@@ -7,9 +7,9 @@ namespace DogFW::libres
 		switch (icon)
 		{
 		///////////////////////////////////////////
-		case EnLibIcons::IconMainDFW:
+		case EnLibIcons::IconDFWMain:
 			{
-				return icon::getMainDFW(iconSize);
+				return icons::getDFWMain(iconSize);
 			}
 		///////////////////////////////////////////
 

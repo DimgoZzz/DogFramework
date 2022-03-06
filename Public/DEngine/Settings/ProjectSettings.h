@@ -2,7 +2,7 @@
 #include "DFW/DBasicTypes.h"
 #include "DFW/DString.h"
 #include "DFW/DLibResources.h"
-#include "DFW/DFiles.h"
+#include "DFW/DFileSystem.h"
 
 
 namespace DogFW::settings
@@ -21,7 +21,7 @@ namespace DogFW::settings
 		WString projectName {L"Untitled Project"};
 		WString projectNameShort {L"U P"};
 		Path logPath{ L"Log\\"};
-		HICON projectDefaultIcon{ libres::getIcon(libres::EnLibIcons::IconMainDFW) };
+		HICON projectDefaultIcon{ libres::getIcon(libres::EnLibIcons::IconDFWMain) };
 	};
 
 }
