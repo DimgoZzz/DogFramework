@@ -27,6 +27,7 @@ void DogFW::Stopwatch::start()
 			win::msgbox::critError(L"QueryPerformanceCounter return 0!");
 		}
 		startTick_ = temp;
+		stopped_ = false;
 	}
 }
 
@@ -40,6 +41,7 @@ void DogFW::Stopwatch::stop()
 			win::msgbox::critError(L"QueryPerformanceCounter return 0!");
 		}
 		stopTick_ = temp;
+		stopped_ = true;
 	}
 }
 

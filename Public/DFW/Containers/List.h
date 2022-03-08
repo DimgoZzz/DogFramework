@@ -8,11 +8,12 @@ namespace DogFW::containers
 	template<class T,class A=Bool>
 	class List
 	{
-#pragma region IteratorNodeClasses
+#pragma region Iterator
 	////////////////////////////////////
 	//Forward declare
 	private:class Node;
 	public: class Iterator;
+	public: class ReverseIterator;
 	public: 
 		using ValueType = T;
 		using AllocType = A;
@@ -45,7 +46,7 @@ namespace DogFW::containers
 			~Iterator() noexcept {}
 
 			//Prefix overload
-			Iterator& operator++()
+			Iterator& operator++() noexcept
 			{
 				if (currentNode_)
 				{
@@ -54,14 +55,14 @@ namespace DogFW::containers
 				return *this;
 			}
 			//Postfix overload
-			Iterator& operator++(int)
+			Iterator& operator++(int) noexcept
 			{
 				Iterator temp = *this;
 				++(*this);
 				return *this;
 			}
 			//Prefix overload
-			Iterator& operator--()
+			Iterator& operator--() noexcept
 			{
 				if (currentNode_)
 				{
@@ -70,18 +71,18 @@ namespace DogFW::containers
 				return *this;
 			}
 			//Postfix overload
-			Iterator& operator--(int)
+			Iterator& operator--(int) noexcept
 			{
 				Iterator temp = *this;
 				--(*this);
 				return *this;
 			}
-
-			bool operator!=(const Iterator& other)
+			
+			bool operator!=(const Iterator& other) const noexcept
 			{
 				return currentNode_ != other.currentNode_;
 			}
-			bool operator==(const Iterator& other)
+			bool operator==(const Iterator& other) const noexcept
 			{
 				return currentNode_ == other.currentNode_;
 			}
@@ -89,6 +90,10 @@ namespace DogFW::containers
 			T& operator*()
 			{
 				return (currentNode_->data);
+			}
+			T* operator->()
+			{
+				return &(currentNode_->data);
 			}
 		private:
 			Node* getNodePtr() { return currentNode_; }
@@ -99,7 +104,7 @@ namespace DogFW::containers
 			friend class List;
 		};
 	////////////////////////////////////
-#pragma endregion IteratorNodeClasses
+#pragma endregion Iterator
 		
 	public:
 		List() noexcept {  }
@@ -115,30 +120,34 @@ namespace DogFW::containers
 			return Iterator(nullptr);
 		}
 
-		//Info
-
 		Bool isEmpty()		{ return size_ == 0;}
 		UInt64 getSize()	{ return size_;		}
 		//UInt64 getMaxSize() { return maxSize_;	}
 		
 		T getFrontElement()		{ return headPtr_->data; }
 		T getBackElement()		{ return tailPtr_->data; }
-		T& getFrontElementR()	{ return headPtr_->data; }
-		T& getBackElementR()	{ return tailPtr_->data; }
+		T& getFrontElementRef()	{ return headPtr_->data; }
+		T& getBackElementRef()	{ return tailPtr_->data; }
 
 		void pushFront(const T& value)
 		{
 			Node* newNode = new Node;
 			newNode->data = value;
+			newNode->prev = nullptr;
 
 			newNode->next = headPtr_;
-			newNode->prev = nullptr;
 
 			if (headPtr_ != nullptr)
 			{
 				headPtr_->prev = newNode;
 			}
+			
 			headPtr_ = newNode;
+
+			if (tailPtr_ == nullptr)
+			{
+				tailPtr_ = newNode;
+			}
 
 			++size_;
 		};
@@ -156,26 +165,16 @@ namespace DogFW::containers
 			newNode->data = value;
 			newNode->next = nullptr;
 
-			//If only head exists 
-			if (tailPtr_ == nullptr)
-			{
-				newNode->prev = headPtr_;
-				headPtr_->next = newNode;
-			}
-			else
-			{
-				newNode->prev = tailPtr_;
-				tailPtr_->next = newNode;
-			}
+			newNode->prev = tailPtr_;
+			tailPtr_->next = newNode;
+
 			tailPtr_ = newNode;
 
 			++size_;
 		};
 		//void pushBack(T&& value);
 
-		/// <summary>
-		/// Inserts new value after given iterator.
-		/// </summary>
+		/// <summary>Inserts new value after given iterator.</summary>
 		/// <returns>Pair of Iterator to new element,and Bool indicating success</returns>
 		Pair<Iterator, Bool> insertAfter(Iterator insIter, const T& value)
 		{
@@ -186,7 +185,6 @@ namespace DogFW::containers
 
 			Node* newNode = new Node();
 			newNode->data = value;
-
 
 			Node *prevNode = insIter.getNodePtr();
 			Node *nextNode = prevNode->next;
@@ -209,6 +207,9 @@ namespace DogFW::containers
 
 			return Pair(Iterator(newNode), true);
 		}
+		
+		/// <summary>Inserts new value after given iterator.</summary>
+		/// <returns>Pair of Iterator to new element,and Bool indicating success</returns>
 		Pair<Iterator, Bool> insertBefore(Iterator insIter, const T& value)
 		{
 			if (insIter.currentNode_ == nullptr)
@@ -245,6 +246,8 @@ namespace DogFW::containers
 		void erase(Iterator iter)
 		{
 			Node* nodeRef = iter.getNodePtr();
+			if (nodeRef == nullptr) { return; };
+
 			Node* next = nodeRef->next;
 			Node* prev = nodeRef->prev;
 
@@ -252,9 +255,17 @@ namespace DogFW::containers
 			{
 				next->prev = prev;
 			}
+			else
+			{
+				tailPtr_ = prev;
+			}
 			if (prev != nullptr)
 			{
 				prev->next = next;
+			}
+			else
+			{
+				headPtr_ = next;
 			}
 
 			delete nodeRef;
@@ -262,23 +273,15 @@ namespace DogFW::containers
 			--size_;
 		}
 		//void erase(Iterator iterFirst, Iterator iterLast);
+
 		void popBack() 
 		{
-			if (tailPtr_ == nullptr) { return; }
-			Node* nodeRef = tailPtr_;
-			Node* next = nullptr;
-			Node* prev = nodeRef->prev;
-
-			if (prev != nullptr)
-			{
-				prev->next = next;
-			}
-
-			delete nodeRef;
-
-			--size_;
+			erase(begin());
 		}
-		void popFront();
+		void popFront()
+		{
+			erase(end());
+		}
 
 	private:
 		Node* headPtr_ {nullptr};
