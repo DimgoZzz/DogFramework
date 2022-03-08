@@ -1,6 +1,5 @@
 #pragma once
-#include "DFW/DBasicTypes.h"
-#include "DFW/DString.h"
+#include "DFW/DBase.h"
 #include <vector>
 
 namespace DogFW

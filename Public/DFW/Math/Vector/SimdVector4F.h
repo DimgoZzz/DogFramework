@@ -1,6 +1,6 @@
 #pragma once
-#include "DFW/DBasicTypes.h"
-#include "DFW/External/DirectX/DogDirectX.h"
+#include "DFW/DBase.h"
+#include "DFW/DDX12.h"
 
 namespace DogFW::vector::simd
 {

@@ -1,5 +1,5 @@
 #pragma once
-#include "DFW/DBasicTypes.h"
+#include "DFW/DBase.h"
 #include "DFW/DWin.h"
 #include "DFW/LibResources/Icons/IconDFWMain.h"
 

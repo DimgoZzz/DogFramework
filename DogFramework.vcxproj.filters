@@ -96,11 +96,10 @@
     <ClInclude Include="Public\DFW\LibResources\Icons\IconDFWMain.h" />
     <ClInclude Include="Public\DFW\LibResources\LibResources.h" />
     <ClInclude Include="Public\DFW\DWin.h" />
-    <ClInclude Include="Public\DFW\Common\Macros\EnvMacros.h" />
+    <ClInclude Include="Public\DFW\Common\Macros\BasicMacros.h" />
     <ClInclude Include="Public\DFW\DString.h" />
     <ClInclude Include="Public\DFW\LibResources\Icons\LibIcons.h" />
     <ClInclude Include="Public\DFW\External\Windows\DWError.h" />
-    <ClInclude Include="Public\DFW\DDev.h" />
     <ClInclude Include="Public\DFW\External\Windows\DWMessageBox.h" />
     <ClInclude Include="Public\DFW\DLibResources.h" />
     <ClInclude Include="Public\DFW\Math\Vector\SimpleVector2.h" />
@@ -116,7 +115,7 @@
     <ClInclude Include="Public\DFW\External\DirectX\DogDirectX.h" />
     <ClInclude Include="Public\DFW\External\Windows\DogWindows.h" />
     <ClInclude Include="Public\DFW\Math\Vector\SimdVector4F.h" />
-    <ClInclude Include="Public\DFW\Common\Patterns\ClassTemplates.h" />
+    <ClInclude Include="Public\DFW\Common\Patterns\ClassPatterns.h" />
     <ClInclude Include="Public\DFW\DBase.h" />
     <ClInclude Include="Public\DFW\Common\Patterns.h" />
     <ClInclude Include="Public\DEngine\DEngine.h" />
@@ -142,5 +141,7 @@
     <ClInclude Include="Public\DFW\Containers\List.h" />
     <ClInclude Include="Public\DFW\Containers\Pair.h" />
     <ClInclude Include="Public\DFW\DContainers.h" />
+    <ClInclude Include="Public\DFW\DDebug.h" />
+    <ClInclude Include="Public\DFW\DDX12.h" />
   </ItemGroup>
 </Project>

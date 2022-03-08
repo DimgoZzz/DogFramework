@@ -5,8 +5,8 @@
       <Configuration>Debug</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
-    <ProjectConfiguration Include="ReleaseNoexcept|x64">
-      <Configuration>ReleaseNoexcept</Configuration>
+    <ProjectConfiguration Include="ReleaseKernel|x64">
+      <Configuration>ReleaseKernel</Configuration>
       <Platform>x64</Platform>
     </ProjectConfiguration>
     <ProjectConfiguration Include="Release|x64">
@@ -47,6 +47,8 @@
     <ClInclude Include="Public\DFW\DContainers.h" />
     <ClInclude Include="Public\DFW\Containers\List.h" />
     <ClInclude Include="Public\DFW\Containers\Pair.h" />
+    <ClInclude Include="Public\DFW\DDebug.h" />
+    <ClInclude Include="Public\DFW\DDX12.h" />
     <ClInclude Include="Public\DFW\DFileSystem.h" />
     <ClInclude Include="Public\DFW\FileSystem\FileTypes.h" />
     <ClInclude Include="Public\DFW\FileSystem\FileTypes\File.h" />
@@ -63,7 +65,7 @@
     <ClInclude Include="Public\DEngine\Systems\Window\WindowSystem.h" />
     <ClInclude Include="Public\DFW\Common\BasicTypes.h" />
     <ClInclude Include="Public\DFW\Common\Patterns.h" />
-    <ClInclude Include="Public\DFW\Common\Patterns\ClassTemplates.h" />
+    <ClInclude Include="Public\DFW\Common\Patterns\ClassPatterns.h" />
     <ClInclude Include="Public\DFW\DBase.h" />
     <ClInclude Include="Public\DFW\DBasicTypes.h" />
     <ClInclude Include="Public\DFW\DMemory.h" />
@@ -75,10 +77,9 @@
     <ClInclude Include="Public\DFW\Time\Stopwatch.h" />
     <ClInclude Include="Public\DFW\Time\TimerSimple.h" />
     <ClInclude Include="Public\DFW\Utilities\Log\LoggerSimple.h" />
-    <ClInclude Include="Public\DFW\DDev.h" />
     <ClInclude Include="Public\DFW\DLibResources.h" />
     <ClInclude Include="Public\DFW\DString.h" />
-    <ClInclude Include="Public\DFW\Common\Macros\EnvMacros.h" />
+    <ClInclude Include="Public\DFW\Common\Macros\BasicMacros.h" />
     <ClInclude Include="Public\DFW\External\Windows\DWMessageBox.h" />
     <ClInclude Include="Public\DFW\External\Windows\DWError.h" />
     <ClInclude Include="Public\DFW\DMath.h" />
@@ -120,7 +121,7 @@
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseNoexcept|x64'" Label="Configuration">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseKernel|x64'" Label="Configuration">
     <ConfigurationType>StaticLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <PlatformToolset>v143</PlatformToolset>
@@ -138,7 +139,7 @@
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
-  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseNoexcept|x64'" Label="PropertySheets">
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseKernel|x64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
@@ -154,7 +155,7 @@
     <IntDir>$(SolutionDir)Build\Intermediate\$(Platform)-$(Configuration)\$(ProjectName)\</IntDir>
     <AllProjectBMIsArePublic>true</AllProjectBMIsArePublic>
   </PropertyGroup>
-  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseNoexcept|x64'">
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseKernel|x64'">
     <LinkIncremental>false</LinkIncremental>
     <OutDir>$(SolutionDir)Build\$(Platform)-$(Configuration)\$(ProjectName)\</OutDir>
     <IntDir>$(SolutionDir)Build\Intermediate\$(Platform)-$(Configuration)\$(ProjectName)\</IntDir>
@@ -164,7 +165,7 @@
     <ClCompile>
       <WarningLevel>TurnOffAllWarnings</WarningLevel>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_HAS_EXCEPTIONS=0;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
@@ -173,6 +174,8 @@
       <FloatingPointModel>Fast</FloatingPointModel>
       <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -185,7 +188,7 @@
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
       <SDLCheck>true</SDLCheck>
-      <PreprocessorDefinitions>NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PreprocessorDefinitions>_HAS_EXCEPTIONS=0;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <ConformanceMode>true</ConformanceMode>
       <LanguageStandard>stdcpp20</LanguageStandard>
       <LanguageStandard_C>stdc17</LanguageStandard_C>
@@ -194,6 +197,8 @@
       <FloatingPointModel>Fast</FloatingPointModel>
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <ExceptionHandling>false</ExceptionHandling>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
@@ -202,7 +207,7 @@
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
   </ItemDefinitionGroup>
-  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseNoexcept|x64'">
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='ReleaseKernel|x64'">
     <ClCompile>
       <WarningLevel>Level3</WarningLevel>
       <FunctionLevelLinking>true</FunctionLevelLinking>
@@ -218,7 +223,8 @@
       <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
       <MultiProcessorCompilation>true</MultiProcessorCompilation>
       <ExceptionHandling>false</ExceptionHandling>
-      <AdditionalOptions>/D_HAS_EXCEPTIONS=0 %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalOptions>/kernel %(AdditionalOptions)</AdditionalOptions>
+      <RuntimeTypeInfo>false</RuntimeTypeInfo>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>

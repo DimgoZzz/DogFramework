@@ -1,2 +1,2 @@
 #pragma once
-#include "DFW/Common/Patterns/ClassTemplates.h"
+#include "DFW/Common/Patterns/ClassPatterns.h"

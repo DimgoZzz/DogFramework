@@ -1,7 +1,6 @@
 #pragma once
 
-#include "DFW/DBasicTypes.h"
-#include "DFW/Common/Macros/EnvMacros.h"
+#include "DFW/DBase.h"
 
 //Windows.h
 #include "DFW/External/Windows/DogWindows.h"

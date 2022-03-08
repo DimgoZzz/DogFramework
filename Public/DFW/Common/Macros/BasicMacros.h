@@ -1,8 +1,7 @@
 //Environment Macros
 #pragma once
-#include "DFW/DBasicTypes.h"
-#include "DFW/DString.h"
 
+//File/Line Names
 //Current File |WChar
 #define D_FILE_ __FILEW__
 
@@ -11,4 +10,3 @@
 
 //Patn and number of current line |WChar
 #define D_FILELINEW_ ((DogFW::string::format(L"Line %i File %s ",__LINE__,__FILEW__)).c_str())
-

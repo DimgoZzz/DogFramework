@@ -1,5 +1,5 @@
 #pragma once
-#include "DFW/DBasicTypes.h"
+#include "DFW/DBase.h"
 #include "DFW/Containers/Pair.h"
 
 namespace DogFW::containers
@@ -37,16 +37,16 @@ namespace DogFW::containers
 		{
 		public:
 			//Iterator() noexcept : currentNode_(nullptr) {};
-			Iterator(Node* ptr) noexcept			 : currentNode_(ptr) {}
-			Iterator(const Iterator& other) noexcept : currentNode_(other.currentNode_) {}
+			Iterator(Node* ptr) 			 : currentNode_(ptr) {}
+			Iterator(const Iterator& other)  : currentNode_(other.currentNode_) {}
 
-			Iterator& operator=(Node* ptr)	noexcept			{ currentNode_ = ptr; return *this; }
-			Iterator& operator=(const Iterator& other) noexcept { currentNode_ = other.currentNode_; return *this; }
+			Iterator& operator=(Node* ptr)				{ currentNode_ = ptr; return *this; }
+			Iterator& operator=(const Iterator& other)  { currentNode_ = other.currentNode_; return *this; }
 			
-			~Iterator() noexcept {}
+			~Iterator() {}
 
 			//Prefix overload
-			Iterator& operator++() noexcept
+			Iterator& operator++()
 			{
 				if (currentNode_)
 				{
@@ -55,14 +55,14 @@ namespace DogFW::containers
 				return *this;
 			}
 			//Postfix overload
-			Iterator& operator++(int) noexcept
+			Iterator& operator++(int)
 			{
 				Iterator temp = *this;
 				++(*this);
 				return *this;
 			}
 			//Prefix overload
-			Iterator& operator--() noexcept
+			Iterator& operator--()
 			{
 				if (currentNode_)
 				{
@@ -71,18 +71,18 @@ namespace DogFW::containers
 				return *this;
 			}
 			//Postfix overload
-			Iterator& operator--(int) noexcept
+			Iterator& operator--(int)
 			{
 				Iterator temp = *this;
 				--(*this);
 				return *this;
 			}
 			
-			bool operator!=(const Iterator& other) const noexcept
+			bool operator!=(const Iterator& other) const
 			{
 				return currentNode_ != other.currentNode_;
 			}
-			bool operator==(const Iterator& other) const noexcept
+			bool operator==(const Iterator& other) const
 			{
 				return currentNode_ == other.currentNode_;
 			}
@@ -107,7 +107,14 @@ namespace DogFW::containers
 #pragma endregion Iterator
 		
 	public:
-		List() noexcept {  }
+		List() {}
+		~List()
+		{
+			while(begin() != nullptr)
+			{
+				erase(begin());
+			}
+		}
 
 	public:
 		//Iterators
