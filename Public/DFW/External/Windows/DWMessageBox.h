@@ -4,8 +4,8 @@
 
 #pragma region Macros
 
-#define D_CRITERR(x) DogFW::win::msgbox::showCritError(DogFW::string::format(L"Error: %s \n%s",x,D_FILELINEW_))
-#define D_WARNING(x) DogFW::win::msgbox::showWarning(DogFW::string::format(L"Error: %s \n%s",x,D_FILELINEW_))
+#define D_CRITERR(x) DogFW::win::msgbox::critError(DogFW::string::format(L"Error: %s \n%s",x,D_LINEFILE_))
+#define D_WARNING(x) DogFW::win::msgbox::warning(DogFW::string::format(L"Warning: %s \n%s",x,D_LINEFILE_))
 
 #pragma endregion Macros
 
