@@ -146,5 +146,10 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="cpp.hint" />
+    <None Include="VSProperties\DogCommon.props" />
+    <None Include="VSProperties\DogDebug.props" />
+    <None Include="VSProperties\DogNoExceptions.props" />
+    <None Include="VSProperties\DogOutputDirectories.props" />
+    <None Include="VSProperties\DogRelease.props" />
   </ItemGroup>
 </Project>
