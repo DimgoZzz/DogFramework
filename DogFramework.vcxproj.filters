@@ -62,18 +62,11 @@
     <ClCompile Include="Private\DFW\Time\Stopwatch.cpp" />
     <ClCompile Include="Private\DFW\Utilities\Log\LoggerSimple.cpp" />
     <ClCompile Include="Private\DFW\Time\TimerSimple.cpp" />
-    <ClCompile Include="Private\DEngine\Engine\IEngine.cpp" />
-    <ClCompile Include="Private\DEngine\Systems\App\App.cpp" />
-    <ClCompile Include="Private\DEngine\Systems\App\IApp.cpp" />
-    <ClCompile Include="Private\DEngine\SystemWindow\IWindow.cpp" />
     <ClCompile Include="Private\DFW\Math\Vector\SimdVector4F.cpp" />
-    <ClCompile Include="Private\DEngine\Systems\Log\SystemLog.cpp" />
-    <ClCompile Include="Private\DEngine\Systems\File\SystemFile.cpp" />
     <ClCompile Include="Private\DFW\FileSystem\FileTypes\Directory.cpp" />
     <ClCompile Include="Private\DFW\FileSystem\FileTypes\Object.cpp" />
     <ClCompile Include="Private\DFW\FileSystem\Path.cpp" />
     <ClCompile Include="Private\DFW\FileSystem\FileTypes\File.cpp" />
-    <ClCompile Include="Private\DEngine\Settings\ProjectSettings.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="Public\DFW\Text\Char\Char.h">
@@ -107,10 +100,6 @@
     <ClInclude Include="Public\DFW\Time\Stopwatch.h" />
     <ClInclude Include="Public\DFW\Utilities\Log\LoggerSimple.h" />
     <ClInclude Include="Public\DFW\Time\TimerSimple.h" />
-    <ClInclude Include="Public\DEngine\Engine\IEngine.h" />
-    <ClInclude Include="Public\DEngine\Systems\App\App.h" />
-    <ClInclude Include="Public\DEngine\Systems\App\IApp.h" />
-    <ClInclude Include="Public\DEngine\Systems\Window\IWindow.h" />
     <ClInclude Include="Public\DFW\DBasicTypes.h" />
     <ClInclude Include="Public\DFW\External\DirectX\DogDirectX.h" />
     <ClInclude Include="Public\DFW\External\Windows\DogWindows.h" />
@@ -118,12 +107,6 @@
     <ClInclude Include="Public\DFW\Common\Patterns\ClassPatterns.h" />
     <ClInclude Include="Public\DFW\DBase.h" />
     <ClInclude Include="Public\DFW\Common\Patterns.h" />
-    <ClInclude Include="Public\DEngine\DEngine.h" />
-    <ClInclude Include="Public\DEngine\Systems\App\AppSystem.h" />
-    <ClInclude Include="Public\DEngine\DSystems.h" />
-    <ClInclude Include="Public\DEngine\Systems\Window\WindowSystem.h" />
-    <ClInclude Include="Public\DEngine\Systems\Log\LogSystem.h" />
-    <ClInclude Include="Public\DEngine\Systems\File\FileSystem.h" />
     <ClInclude Include="Public\DFW\Memory\Pointer\UniquePtr.h" />
     <ClInclude Include="Public\DFW\DPointer.h" />
     <ClInclude Include="Public\DFW\DMemory.h" />
@@ -132,8 +115,6 @@
     <ClInclude Include="Public\DFW\FileSystem\Path.h" />
     <ClInclude Include="Public\DFW\FileSystem\FileTypes\File.h" />
     <ClInclude Include="Public\DFW\FileSystem\FileTypes.h" />
-    <ClInclude Include="Public\DEngine\Settings\ProjectSettings.h" />
-    <ClInclude Include="Public\DEngine\DSettings.h" />
     <ClInclude Include="Public\DFW\DFileSystem.h" />
     <ClInclude Include="Public\DFW\Memory\Allocator\AllocatorBasic.h" />
     <ClInclude Include="Public\DFW\Memory\Allocator\AllocMy.h" />
