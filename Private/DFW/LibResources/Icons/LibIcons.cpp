@@ -12,7 +12,8 @@ namespace DogFW::libres
 				return icons::getDFWMain(iconSize);
 			}
 		///////////////////////////////////////////
-
+		default :
+			return icons::getDFWMain(iconSize);
 		}
 	}
 }

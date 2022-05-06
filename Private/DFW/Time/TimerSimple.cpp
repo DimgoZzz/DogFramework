@@ -19,7 +19,7 @@ namespace DogFW
 		}
 		else
 		{
-			(Float)(((currTime_ - baseTime_) - pausedTime_) * secondsPerCount_);
+			return (Float)(((currTime_ - baseTime_) - pausedTime_) * secondsPerCount_);
 		}
 	}
 
