@@ -2,7 +2,7 @@
 
 #include <cmath>
 
-using namespace DogFW::basictypes;
+using namespace DogFW;
 
 namespace DogFW::math
 {

@@ -1,5 +1,6 @@
 #pragma once
-#include "DFW/DBase.h"
+#include "DFW/DCore.h"
+#include "DFW/Math/Int/Int.h"
 
 namespace DogFW::vector::simple
 {

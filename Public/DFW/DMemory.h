@@ -1,6 +1,5 @@
 #pragma once
-
-#include "DPointer.h"
+#include "DFW/Memory/Pointer/UniquePtr.h"
 
 namespace DogFW
 {

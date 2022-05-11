@@ -1,5 +1,5 @@
 #pragma once
-#include "DFW/DBase.h"
+#include "DFW/DCore.h"
 #include "DFW/DDX12.h"
 
 namespace DogFW::vector::simd

@@ -1,6 +1,6 @@
 #pragma once
 
-namespace DogFW::basictypes
+namespace DogFW
 {
 	using Bool = bool;
 }

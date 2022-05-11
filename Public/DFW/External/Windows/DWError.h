@@ -1,5 +1,5 @@
 #pragma once
-#include "DFW/DBase.h"
+#include "DFW/DCore.h"
 #include "DFW/External/Windows/DogWindows.h"
 
 namespace DogFW::win::error

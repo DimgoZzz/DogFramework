@@ -22,8 +22,6 @@
     <ClCompile Include="Private\DFW\External\Windows\DWMessageBox.cpp" />
     <ClCompile Include="Private\DFW\External\Windows\DWError.cpp" />
     <ClCompile Include="Private\DFW\Text\String\String.cpp" />
-    <ClCompile Include="Private\DFW\Math\Bool\Bool.cpp" />
-    <ClCompile Include="Private\DFW\Math\Float\Float.cpp" />
     <ClCompile Include="Private\DFW\Text\Char\Char.cpp" />
     <ClCompile Include="Public\DFW\Math\Vector\Vector.h" />
     <ClCompile Include="Private\DFW\Math\Integer\Int.cpp" />
@@ -31,10 +29,17 @@
     <ClCompile Include="Private\DFW\LibResources\Icons\LibIcons.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Public\DFW\Common\BasicTypes\BasicChar.h" />
+    <ClInclude Include="Public\DFW\Common\BasicTypes\BasicInt.h" />
+    <ClInclude Include="Public\DFW\Common\Macros\ClassMacros.h" />
+    <ClInclude Include="Public\DFW\Common\Macros\EnvironmentMacros.h" />
+    <ClInclude Include="Public\DFW\Common\Macros\Macros.h" />
+    <ClInclude Include="Public\DFW\Common\Macros\SettingsDefinesMacros.h" />
+    <ClInclude Include="Public\DFW\Containers\DoublyLinkedList.h" />
+    <ClInclude Include="Public\DFW\Containers\temp.h" />
     <ClInclude Include="Public\DFW\DContainers.h" />
     <ClInclude Include="Public\DFW\Containers\List.h" />
     <ClInclude Include="Public\DFW\Containers\Pair.h" />
-    <ClInclude Include="Public\DFW\DDebug.h" />
     <ClInclude Include="Public\DFW\DDX12.h" />
     <ClInclude Include="Public\DFW\DFileSystem.h" />
     <ClInclude Include="Public\DFW\FileSystem\FileTypes.h" />
@@ -42,13 +47,12 @@
     <ClInclude Include="Public\DFW\FileSystem\Path.h" />
     <ClInclude Include="Public\DFW\FileSystem\FileTypes\FileObject.h" />
     <ClInclude Include="Public\DFW\FileSystem\FileTypes\Directory.h" />
-    <ClInclude Include="Public\DFW\Common\BasicTypes.h" />
-    <ClInclude Include="Public\DFW\Common\Patterns.h" />
+    <ClInclude Include="Public\DFW\Common\BasicTypes\BasicTypes.h" />
+    <ClInclude Include="Public\DFW\Common\Patterns\Patterns.h" />
     <ClInclude Include="Public\DFW\Common\Patterns\ClassPatterns.h" />
-    <ClInclude Include="Public\DFW\DBase.h" />
+    <ClInclude Include="Public\DFW\DCore.h" />
     <ClInclude Include="Public\DFW\DBasicTypes.h" />
     <ClInclude Include="Public\DFW\DMemory.h" />
-    <ClInclude Include="Public\DFW\DPointer.h" />
     <ClInclude Include="Public\DFW\Math\Vector\SimdVector4F.h" />
     <ClInclude Include="Public\DFW\Memory\Allocator\AllocatorBasic.h" />
     <ClInclude Include="Public\DFW\Memory\Allocator\AllocPoolLocal.h" />
@@ -65,8 +69,8 @@
     <ClInclude Include="Public\DFW\Math\Vector\SimpleVector2.h" />
     <ClInclude Include="Public\DFW\LibResources\Icons\LibIcons.h" />
     <ClInclude Include="Public\DFW\Text\String\String.h" />
-    <ClInclude Include="Public\DFW\Math\Bool\Bool.h" />
-    <ClInclude Include="Public\DFW\Math\Float\Float.h" />
+    <ClInclude Include="Public\DFW\Common\BasicTypes\BasicBool.h" />
+    <ClInclude Include="Public\DFW\Common\BasicTypes\BasicFloat.h" />
     <ClInclude Include="Public\DFW\Text\Char\Char.h" />
     <ClInclude Include="Public\DFW\DVector.h" />
     <ClInclude Include="Public\DFW\Math\Int\Int.h" />

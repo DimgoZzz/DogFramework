@@ -1,5 +1,5 @@
 #pragma once
-#include "DFW/DBase.h"
+#include "DFW/DCore.h"
 #include <vector>
 
 namespace DogFW

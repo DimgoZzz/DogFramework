@@ -1,22 +1,16 @@
 #pragma once
 
-namespace DogFW::patterns
+namespace DogFW
 {
-	class NonCopyable
+	class ClassNoCopy
 	{
 	public:
-		NonCopyable() {};
-		~NonCopyable() {};
+		ClassNoCopy() {};
+		~ClassNoCopy() {};
 	private:
-		NonCopyable(NonCopyable const&) = delete;
-		NonCopyable(NonCopyable&&) = delete;
+		ClassNoCopy(ClassNoCopy const&) = delete;
+		ClassNoCopy& operator=(ClassNoCopy const&) = delete;
+		ClassNoCopy(ClassNoCopy&&) = delete;
+		ClassNoCopy& operator=(ClassNoCopy&&) = delete;
 	};
-
-	class NonMoveable
-	{
-	private:
-		NonMoveable& operator=(NonCopyable const&) = delete;
-		NonMoveable& operator=(NonCopyable&&) = delete;
-	};
-
 }

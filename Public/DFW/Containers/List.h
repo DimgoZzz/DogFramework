@@ -1,5 +1,5 @@
 #pragma once
-#include "DFW/DBase.h"
+#include "DFW/DCore.h"
 #include "DFW/Containers/Pair.h"
 
 namespace DogFW::containers
@@ -22,7 +22,7 @@ namespace DogFW::containers
 	private:
 		class Node
 		{
-			Node() nexpt {};
+			Node() nxpt {};
 			//Node() noexcept : next(nullptr), prev(nullptr);
 			//Node(T value, Node* nn, Node* pn) noexcept :data(value), next(nn), prev(pn) {};
 			T data;
@@ -38,16 +38,16 @@ namespace DogFW::containers
 		{
 		public:
 			//Iterator() noexcept : currentNode_(nullptr) {};
-			Iterator(Node* ptr)				nexpt : currentNode_(ptr) {}
-			Iterator(const Iterator& other) nexpt : currentNode_(other.currentNode_) {}
+			Iterator(Node* ptr)				nxpt : currentNode_(ptr) {}
+			Iterator(const Iterator& other) nxpt : currentNode_(other.currentNode_) {}
 
-			Iterator& operator=(Node* ptr)				nexpt { currentNode_ = ptr; return *this; }
-			Iterator& operator=(const Iterator& other)	nexpt { currentNode_ = other.currentNode_; return *this; }
+			Iterator& operator=(Node* ptr)				nxpt { currentNode_ = ptr; return *this; }
+			Iterator& operator=(const Iterator& other)	nxpt { currentNode_ = other.currentNode_; return *this; }
 			
-			~Iterator() nexpt {};
+			~Iterator() nxpt {};
 
 			//Prefix overload
-			Iterator& operator++() nexpt
+			Iterator& operator++() nxpt
 			{
 				if (currentNode_)
 				{
@@ -56,14 +56,14 @@ namespace DogFW::containers
 				return *this;
 			}
 			//Postfix overload
-			Iterator& operator++(int) nexpt
+			Iterator& operator++(int) nxpt
 			{
 				Iterator temp = *this;
 				++(*this);
 				return *this;
 			}
 			//Prefix overload
-			Iterator& operator--() nexpt
+			Iterator& operator--() nxpt
 			{
 				if (currentNode_)
 				{
@@ -72,32 +72,32 @@ namespace DogFW::containers
 				return *this;
 			}
 			//Postfix overload
-			Iterator& operator--(int) nexpt
+			Iterator& operator--(int) nxpt
 			{
 				Iterator temp = *this;
 				--(*this);
 				return *this;
 			}
 			
-			bool operator!=(const Iterator& other) const nexpt
+			bool operator!=(const Iterator& other) const nxpt
 			{
 				return currentNode_ != other.currentNode_;
 			}
-			bool operator==(const Iterator& other) const nexpt
+			bool operator==(const Iterator& other) const nxpt
 			{
 				return currentNode_ == other.currentNode_;
 			}
 			
-			T& operator*() nexpt
+			T& operator*() nxpt
 			{
 				return (currentNode_->data);
 			}
-			T* operator->() nexpt
+			T* operator->() nxpt
 			{
 				return &(currentNode_->data);
 			}
 		private:
-			Node* getNodePtr() nexpt { return currentNode_; }
+			Node* getNodePtr() nxpt { return currentNode_; }
 
 		private:
 			Node* currentNode_;
@@ -108,33 +108,33 @@ namespace DogFW::containers
 #pragma endregion Iterator
 		
 	public:
-		List() nexpt{}
-		~List() nexpt
+		List() nxpt{}
+		~List() nxpt
 		{
 			clear();
 		}
 
 	public:
 		//Iterators
-		Iterator begin() nexpt
+		Iterator begin() nxpt
 		{
 			return Iterator(headPtr_);
 		}
-		Iterator end() nexpt
+		Iterator end() nxpt
 		{
 			return Iterator(nullptr);
 		}
 
-		Bool isEmpty()	 nexpt	{ return size_ == 0;}
-		UInt64 getSize() nexpt	{ return size_;		}
+		Bool isEmpty()	 nxpt	{ return size_ == 0;}
+		UInt64 getSize() nxpt	{ return size_;		}
 		//UInt64 getMaxSize() { return maxSize_;	}
 		
-		T getFrontElement()	nexpt		{ return headPtr_->data; }
-		T getBackElement()	nexpt		{ return tailPtr_->data; }
-		T& getFrontElementRef() nexpt	{ return headPtr_->data; }
-		T& getBackElementRef()  nexpt	{ return tailPtr_->data; }
+		T getFrontElement()	nxpt		{ return headPtr_->data; }
+		T getBackElement()	nxpt		{ return tailPtr_->data; }
+		T& getFrontElementRef() nxpt	{ return headPtr_->data; }
+		T& getBackElementRef()  nxpt	{ return tailPtr_->data; }
 
-		void pushFront(const T& value) nexpt
+		void pushFront(const T& value) nxpt
 		{
 			Node* newNode = new Node;
 			newNode->data = value;
@@ -157,7 +157,7 @@ namespace DogFW::containers
 			++size_;
 		};
 		//void pushFront(T&& value);
-		void pushBack(const T& value) nexpt
+		void pushBack(const T& value) nxpt
 		{
 			//If list is empty
 			if (headPtr_ == nullptr)
@@ -181,7 +181,7 @@ namespace DogFW::containers
 
 		/// <summary>Inserts new value after given iterator.</summary>
 		/// <returns>Pair of Iterator to new element,and Bool indicating success</returns>
-		Pair<Iterator, Bool> insertAfter(Iterator insIter, const T& value) nexpt
+		Pair<Iterator, Bool> insertAfter(Iterator insIter, const T& value) nxpt
 		{
 			if (insIter.currentNode_ == nullptr)
 			{
@@ -215,7 +215,7 @@ namespace DogFW::containers
 		
 		/// <summary>Inserts new value after given iterator.</summary>
 		/// <returns>Pair of Iterator to new element,and Bool indicating success</returns>
-		Pair<Iterator, Bool> insertBefore(Iterator insIter, const T& value) nexpt
+		Pair<Iterator, Bool> insertBefore(Iterator insIter, const T& value) nxpt
 		{
 			if (insIter.currentNode_ == nullptr)
 			{
@@ -248,7 +248,7 @@ namespace DogFW::containers
 			return Pair(Iterator(newNode), true);
 		}
 
-		void erase(Iterator iter) nexpt
+		void erase(Iterator iter) nxpt
 		{
 			Node* nodeRef = iter.getNodePtr();
 			if (nodeRef == nullptr) { return; };
@@ -279,16 +279,16 @@ namespace DogFW::containers
 		}
 		//void erase(Iterator iterFirst, Iterator iterLast);
 
-		void popBack() nexpt
+		void popBack() nxpt
 		{
 			erase(begin());
 		}
-		void popFront() nexpt
+		void popFront() nxpt
 		{
 			erase(end());
 		}
 
-		void clear() nexpt
+		void clear() nxpt
 		{
 			Node* next = begin().getNodePtr();
 			Node* curr;

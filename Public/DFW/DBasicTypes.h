@@ -1,7 +1,7 @@
 #pragma once
-#include "DFW/Common/BasicTypes.h"
+#include "DFW/Common/BasicTypes/BasicTypes.h"
 
 namespace DogFW
 {
-	using namespace DogFW::basictypes;
+
 }
